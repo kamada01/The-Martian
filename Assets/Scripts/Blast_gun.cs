@@ -6,7 +6,7 @@ public class Blast_gun : MonoBehaviour, InventoryItem
 {
     public string Name
     {
-        get { return "Blaster_gun"; }
+        get { return "blast_gun"; }
     }
 
     public Sprite _Image = null;
