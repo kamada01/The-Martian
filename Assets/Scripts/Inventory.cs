@@ -9,6 +9,13 @@ public class Inventory : MonoBehaviour
     private List<InventoryItem> InvItems = new List<InventoryItem>();
     public event EventHandler<InventoryEventArgs> AddedItem;
     public event EventHandler<InventoryEventArgs> RemovedItem;
+    public event EventHandler<InventoryEventArgs> UsedItem;
+
+    public List<InventoryItem> InvList
+    {
+        set { InvItems = value;  }
+        get { return InvItems;  }
+    } 
 
     public void AddItem(InventoryItem item)
     {
@@ -46,6 +53,13 @@ public class Inventory : MonoBehaviour
             {
                 RemovedItem(this, new InventoryEventArgs(item));
             }
+        }
+    }
+    internal void UseItem(InventoryItem item)
+    {
+        if (UsedItem != null)
+        {
+            UsedItem(this, new InventoryEventArgs(item));
         }
     }
 }
