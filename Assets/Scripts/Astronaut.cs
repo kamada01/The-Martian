@@ -31,7 +31,6 @@ public class Astronaut : MonoBehaviour
         goItem.SetActive(true);
 
         goItem.transform.parent = Hand.transform;
-        goItem.transform.position = Hand.transform.position;
     }
 
     // Update is called once per frame

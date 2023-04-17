@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemBase : MonoBehaviour, InventoryItem
 {
+    public GameObject Hand;
     public virtual string Name
     {
         get { return "base_item"; }
@@ -26,6 +27,6 @@ public class ItemBase : MonoBehaviour, InventoryItem
     }
     public virtual void OnUse()
     {
-
+        transform.position = Hand.transform.position;
     }
 }
