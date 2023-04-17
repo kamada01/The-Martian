@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,10 +14,23 @@ public class Astronaut : MonoBehaviour
 
     public Inventory inventory;
 
+    public GameObject Hand;
+
     // Start is called before the first frame update
     void Start()
     {
+        inventory.UsedItem += Inventory_UsedItem;
+    }
 
+    private void Inventory_UsedItem(object sender, InventoryEventArgs e)
+    {
+        InventoryItem item = e.Item;
+
+        // put item into hand
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+
+        goItem.transform.parent = Hand.transform;
     }
 
     // Update is called once per frame

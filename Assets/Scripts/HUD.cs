@@ -5,18 +5,20 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public Inventory Inventory;
-    // Start is called before the first frame update
     void Start()
     {
         Inventory.AddedItem += InventoryScript_AddedItem;
+        Inventory.RemovedItem += Inventory_ItemRemoved;
     }
 
     private void InventoryScript_AddedItem(object sender, InventoryEventArgs e)
     {
-        Transform inventoryPanel = transform.Find("Inventory");
-        foreach (Transform slot in inventoryPanel)
+        Transform inventory = transform.Find("Inventory");
+        foreach (Transform slot in inventory)
         {
-            Image image = slot.GetChild(0).GetComponent<Image>();
+            Transform imageTransform = slot.GetChild(0);
+            Image image = imageTransform.GetComponent<Image>();
+            ItemDrag itemDragHandler = imageTransform.GetComponent<ItemDrag>();
 
             // empty slot
             if (!image.enabled)
@@ -24,6 +26,27 @@ public class HUD : MonoBehaviour
                 image.enabled = true;
                 image.sprite = e.Item.Image;
 
+                itemDragHandler.Item = e.Item;
+                break;
+            }
+        }
+    }
+
+    private void Inventory_ItemRemoved(object sender, InventoryEventArgs e)
+    {
+        Transform inventory = transform.Find("Inventory");
+        foreach(Transform slot in inventory)
+        {
+            Transform imageTransform = slot.GetChild(0);
+            Image image = imageTransform.GetComponent<Image>();
+            ItemDrag itemDragHandler = imageTransform.GetComponent<ItemDrag>();
+
+            // find item in UI
+            if (itemDragHandler.Item.Equals(e.Item))
+            {
+                image.enabled = false;
+                image.sprite = null;
+                itemDragHandler.Item = null;
                 break;
             }
         }
