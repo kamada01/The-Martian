@@ -39,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2561796277
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Astronaut
+    uniqueID: 1865017811
+    locked: 0
+  - name: Weapons
+    uniqueID: 2389650267
     locked: 0
