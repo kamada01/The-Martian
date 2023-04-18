@@ -20,6 +20,18 @@ public class Astronaut : MonoBehaviour
     void Start()
     {
         inventory.UsedItem += Inventory_UsedItem;
+        inventory.RemovedItem += Inventory_RemovedItem;
+    }
+
+    private void Inventory_RemovedItem(object sender, InventoryEventArgs e)
+    {
+        InventoryItem item = e.Item;
+
+        // put item into hand
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+
+        goItem.transform.parent = null;
     }
 
     private void Inventory_UsedItem(object sender, InventoryEventArgs e)
