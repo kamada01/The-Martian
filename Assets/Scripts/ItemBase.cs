@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemBase : MonoBehaviour, InventoryItem
 {
     public GameObject Hand;
+    public GameObject Astronaut;
     public virtual string Name
     {
         get { return "base_item"; }
@@ -28,5 +29,6 @@ public class ItemBase : MonoBehaviour, InventoryItem
     public virtual void OnUse()
     {
         transform.position = Hand.transform.position;
+        transform.rotation = Quaternion.Euler(0, 0, Astronaut.transform.rotation.eulerAngles.z);
     }
 }

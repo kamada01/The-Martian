@@ -16,11 +16,16 @@ public class Astronaut : MonoBehaviour
 
     public GameObject Hand;
 
+    public int MaxHealth = 100;
+    public int CurHealth = 100;
+    public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
         inventory.UsedItem += Inventory_UsedItem;
         inventory.RemovedItem += Inventory_RemovedItem;
+
+        CurHealth = MaxHealth;
     }
 
     private void Inventory_RemovedItem(object sender, InventoryEventArgs e)
@@ -54,6 +59,9 @@ public class Astronaut : MonoBehaviour
 
         // get mouse position for aiming
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        healthBar.SetHealth(CurHealth);
+
     }
 
     private void FixedUpdate()
