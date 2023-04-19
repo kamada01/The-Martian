@@ -17,7 +17,7 @@ public class Astronaut : MonoBehaviour
     public GameObject Hand;
 
     public int MaxHealth = 100;
-    public int CurHealth = 100;
+    public static int CurHealth = 100;
     public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
@@ -70,16 +70,17 @@ public class Astronaut : MonoBehaviour
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
         // rotate player according to mouse position
         Vector2 direction = mousePosition - rb.position;
-        float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = rotation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         InventoryItem item = collision.GetComponent<InventoryItem>();
         if (item != null)
         {
             inventory.AddItem(item);
-        }
+        }        
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class MinotaurMovement : MonoBehaviour
 {
+    public int damage = 10;
+
     [SerializeField] private float speed;
 
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCD;
-    [SerializeField] private int damage;
+    // [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
 
     private float cdTimer = Mathf.Infinity;
@@ -46,6 +48,7 @@ public class MinotaurMovement : MonoBehaviour
                 {
                     //Reduce Player's HP in a sub
                     //Debug.Log("Attack causes damage");
+                    Astronaut.CurHealth -= damage;
                 }
             }
         }
@@ -84,11 +87,6 @@ public class MinotaurMovement : MonoBehaviour
             boxCollider.bounds.size);
     }
 
-    private void DamagePlayer()
-    {
-        //To be implement after setting up the player's hp codes
-    }
-
     private void TakingDamage()
     {
         //To be implement after settig up the player's weapons
@@ -99,7 +97,7 @@ public class MinotaurMovement : MonoBehaviour
         {
             targetDirection = visionController.DirectionToPlayer;
             animator.SetTrigger("move");
-            Debug.Log("Player detected. Moving towards the player");
+            // Debug.Log("Player detected. Moving towards the player");
 
             //Flip the spirte if necessary
             if (targetDirection.x > 0)
@@ -119,7 +117,7 @@ public class MinotaurMovement : MonoBehaviour
             targetDirection = Vector2.zero;
             rb.velocity = Vector2.zero;
             animator.SetTrigger("idle");
-            Debug.Log("Player Not detected.");
+            // Debug.Log("Player Not detected.");
         }
 
     }

@@ -12,6 +12,7 @@ public class ItemClick : MonoBehaviour
 
     private void Update()
     {
+        // detect player input from choosing item from inventory
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Hand.transform.GetChild(0).gameObject.SetActive(false);

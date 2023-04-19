@@ -6,6 +6,7 @@ public class ItemBase : MonoBehaviour, InventoryItem
 {
     public GameObject Hand;
     public GameObject Astronaut;
+
     public virtual string Name
     {
         get { return "base_item"; }
@@ -16,16 +17,21 @@ public class ItemBase : MonoBehaviour, InventoryItem
     {
         get { return _Image; }
     }
+
+    // pick up item from floor into inventory
     public void OnPickup()
     {
         gameObject.SetActive(false);
     }
 
+    // drop weapon from inventory
     public void OnDrop()
     {
         gameObject.SetActive(true);
         gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
     }
+
+    // select weapon from inventory into hand
     public virtual void OnUse()
     {
         transform.position = Hand.transform.position;

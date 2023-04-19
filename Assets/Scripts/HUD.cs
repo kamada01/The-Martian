@@ -16,6 +16,7 @@ public class HUD : MonoBehaviour
         Transform inventory = transform.Find("Inventory");
         foreach (Transform slot in inventory)
         {
+            // get inventory slot
             Transform imageTransform = slot.GetChild(0);
             Image image = imageTransform.GetComponent<Image>();
             ItemDrag itemDragHandler = imageTransform.GetComponent<ItemDrag>();
@@ -37,6 +38,7 @@ public class HUD : MonoBehaviour
         Transform inventory = transform.Find("Inventory");
         foreach(Transform slot in inventory)
         {
+            // get inventory slots
             Transform imageTransform = slot.GetChild(0);
             Image image = imageTransform.GetComponent<Image>();
             ItemDrag itemDragHandler = imageTransform.GetComponent<ItemDrag>();
