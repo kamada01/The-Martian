@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Astronaut : MonoBehaviour
 {
+    [SerializeField] private Transform DamagePopup;
     public float movementSpeed;
     public Rigidbody2D rb;
     Vector2 movement;
@@ -26,6 +27,10 @@ public class Astronaut : MonoBehaviour
         inventory.RemovedItem += Inventory_RemovedItem;
 
         CurHealth = MaxHealth;
+
+        Transform damagePopupTransform = Instantiate(DamagePopup, Vector2.zero, Quaternion.identity);
+        DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
+        damagePopup.Setup(300);
     }
 
     private void Inventory_RemovedItem(object sender, InventoryEventArgs e)
