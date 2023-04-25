@@ -4,7 +4,8 @@ improvments
 - Inventory slots border + color
 - HUD child componenets script linkages
 - Health bar size? Font? Style
-- 'Minotaur ' AnimationEvent has no function name specified! -> Need fix
+- 'Minotaur ' AnimationEvent has no function name specified! -> Need fix 
+      -> Not sure what happens but the prefab should work, will investigate later (Ed 4/25 16:55)
 
 
 # Summery for monsters:
@@ -36,3 +37,4 @@ improvments
 - Low HP
 - Poor Vision
 - Low Attack range
+
