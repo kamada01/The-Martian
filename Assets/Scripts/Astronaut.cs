@@ -20,6 +20,9 @@ public class Astronaut : MonoBehaviour
     public static int CurHealth = 100;
     public HealthBar healthBar;
 
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+
     public GameObject topRight;
     public GameObject bottomLeft;
     private Vector3 topRightL;
@@ -94,10 +97,24 @@ public class Astronaut : MonoBehaviour
 
         // update player position
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+        
+        // update the animation
+        animator.SetFloat("H", movement.x);
+        animator.SetFloat("V", movement.y);
+        if (movement.x > 0.01)
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (movement.x < 0.01)
+        {
+            spriteRenderer.flipX = false;
+        }
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+
         // rotate player according to mouse position
-        Vector2 direction = mousePosition - rb.position;
-        float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = rotation;
+        //Vector2 direction = mousePosition - rb.position;
+        //float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //rb.rotation = rotation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
