@@ -64,7 +64,6 @@ public class Astronaut : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse down");
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = 10;
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
