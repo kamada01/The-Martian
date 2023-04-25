@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameAssets : MonoBehaviour
 {
     public Transform DamagePopup;
-    public Transform Astronaut;
-    public Transform Hand;
+    public GameObject Astronaut;
+    public GameObject Hand;
 
     private static GameAssets asset;
 
@@ -14,7 +14,7 @@ public class GameAssets : MonoBehaviour
     {
         get
         {
-            if (asset == null) asset = Instantiate(Resources.Load<GameAssets>("Game Assets"));
+            if (asset == null) asset = (Instantiate(Resources.Load("GameAssets")) as GameObject).GetComponent<GameAssets>();
             return asset;
         }
     }

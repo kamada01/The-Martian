@@ -3,7 +3,10 @@ guid: 0a250200c79be174890d5be974b04878
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - DamagePopup: {fileID: 2014196087075594950, guid: 2d096f6d76f6f9943b502c1ef3142c6c, type: 3}
+  - Astronaut: {instanceID: 0}
+  - Hand: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
