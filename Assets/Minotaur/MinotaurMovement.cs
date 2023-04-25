@@ -7,10 +7,10 @@ public class MinotaurMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCD;
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private float vision;
-    [SerializeField] private Transform player;
+    [SerializeField] private Astronaut player;
 
     private Vector2 DirectionToPlayer;
 
@@ -20,6 +20,11 @@ public class MinotaurMovement : MonoBehaviour
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
+
+    private void Start()
+    {
+        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
+    }
 
     private void Awake()
     {
@@ -55,13 +60,16 @@ public class MinotaurMovement : MonoBehaviour
         // Wait for 1 second 
         yield return new WaitForSeconds(1f);
         // only reduce player's HP if the player is still within the attacking range after 1 sec
+        Debug.Log(hit.collider.name);
+        /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
-            //DamagePlayer(damage);
+            DamagePlayer(damage);
             //debug message
-            //Debug.Log("Attack causes damage");
-        }
+            Debug.Log("Attack causes damage");
+        }*/
+        DamagePlayer(damage);
     }
 
     private bool PlayerWithinAttackRange()
@@ -90,12 +98,15 @@ public class MinotaurMovement : MonoBehaviour
             boxCollider.bounds.size);
     }
 
-    private void DamagePlayer(float damageCaused)
+    private void DamagePlayer(int damageCaused)
     {
-        //To be implement after setting up the player's hp codes
+        //To be implement after setting up the player's hp 
+        Debug.Log("Hit player");    
+        player.MinusHealth(damageCaused);
+        player.damagePopup(damageCaused);
     }
 
-    public void TakingDamage(float damageTaken)
+    public void TakingDamage(int damageTaken)
     {
         //To be implement after settig up the player's weapons
         HP = HP - damageTaken;
@@ -137,7 +148,7 @@ public class MinotaurMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.position - transform.position;
+        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
 
         if (enemyToPlayerVector.magnitude <= vision)
         {
