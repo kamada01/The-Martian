@@ -19,6 +19,11 @@ public class Astronaut : MonoBehaviour
     public int MaxHealth = 100;
     public static int CurHealth = 100;
     public HealthBar healthBar;
+
+    public GameObject topRight;
+    public GameObject bottomLeft;
+    private Vector3 topRightL;
+    private Vector3 bottomLeftL;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,9 @@ public class Astronaut : MonoBehaviour
         inventory.RemovedItem += Inventory_RemovedItem;
 
         CurHealth = MaxHealth;
+
+        topRightL = topRight.transform.position;
+        bottomLeftL = bottomLeft.transform.position;
     }
 
     private void Inventory_RemovedItem(object sender, InventoryEventArgs e)
@@ -72,8 +80,18 @@ public class Astronaut : MonoBehaviour
 
     }
 
+    private Vector2 input;
     private void FixedUpdate()
     {
+        if ((transform.position.x <= bottomLeftL.x && movement.x == -1) || (transform.position.x >= topRightL.x && movement.x == 1))
+        {
+            movement.x = 0;
+        }
+        if ( (transform.position.y >= topRightL.y && movement.y == 1))
+        {
+            movement.y = 0;
+        }
+
         // update player position
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
         // rotate player according to mouse position
