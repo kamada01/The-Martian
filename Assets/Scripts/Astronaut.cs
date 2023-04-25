@@ -111,10 +111,10 @@ public class Astronaut : MonoBehaviour
         }
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        // rotate player according to mouse position
-        //Vector2 direction = mousePosition - rb.position;
-        //float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //rb.rotation = rotation;
+        //rotate player according to mouse position
+        Vector2 direction = mousePosition - rb.position;
+        float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = rotation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
