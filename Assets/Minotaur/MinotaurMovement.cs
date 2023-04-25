@@ -102,7 +102,7 @@ public class MinotaurMovement : MonoBehaviour
     {
         //To be implement after setting up the player's hp 
         Debug.Log("Hit player");    
-        player.MinusHealth(damageCaused);
+        player.TakingDamage(damageCaused);
         player.damagePopup(damageCaused);
     }
 

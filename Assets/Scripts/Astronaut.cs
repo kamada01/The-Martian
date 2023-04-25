@@ -129,12 +129,25 @@ public class Astronaut : MonoBehaviour
 
     public void TakingDamage(int damageTaken)
     {
-        CurHealth = CurHealth - damageTaken;
+        CurHealth -= damageTaken;
+        Debug.Log("Cur health = " + CurHealth.ToString());
+        healthBar.SetHealth(CurHealth);
 
         if (CurHealth <= 0)
         {
             animator.SetBool("die", true);
         }
 
+    }
+    public float GetHealth()
+    {
+        return CurHealth;
+    }
+
+    public void damagePopup(int n)
+    {
+        Vector3 curPos = gameObject.transform.position;
+        curPos.y += 1;
+        DamagePopup.Create(curPos, n);
     }
 }
