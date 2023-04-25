@@ -1,0 +1,2073 @@
+fileFormatVersion: 2
+guid: e1b7bce130c4a4340b06d195678c1599
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1764
+        width: 181
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d2405ca24560b44af0b782f007b124
+      internalID: -1771613510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1765
+        width: 186
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e00b81e2a75c994e9c033f05d8ac183
+      internalID: 788592033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_2
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1772
+        width: 190
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2b71408cb1f4249aca77b477af0a9f
+      internalID: -393602764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_3
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1776
+        width: 193
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c0fc4001e224a44a0f507b86266173
+      internalID: 1235408182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_4
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1778
+        width: 195
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2974b5839ef5640a7e65634e844a19
+      internalID: 1743941324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_5
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1768
+        width: 188
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65f4a79e875b204eaae03c29110a59c
+      internalID: -1582311801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1558
+        width: 201
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d385eeced2c4b4f803443fc158e5e3
+      internalID: -1650871531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1556
+        width: 206
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fef1f75fb71d54088fe8166bc5e412
+      internalID: -1993494397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1553
+        width: 200
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c910f60170b9d147bef7a05e0953769
+      internalID: -2036971493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_9
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1552
+        width: 201
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8551380cdb0c5f740bba348200681015
+      internalID: -1329347843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_10
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1556
+        width: 202
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f28dbb014d3d83458e92ad4585f8c12
+      internalID: -1360999592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_11
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1559
+        width: 203
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c203003f9fbaf2c49af95aec25763ba2
+      internalID: -1066550694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1326
+        width: 172
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dac821230892cc44be8ec8d68dda528
+      internalID: -1931771127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_13
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1324
+        width: 181
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0801fb2b0600f94d88e1926f207c4ad
+      internalID: -868222108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_14
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1335
+        width: 187
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a045dbc8b492c97408aa44cb52a4f5a6
+      internalID: 314110740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_15
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1336
+        width: 195
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30978ec371aa64440b160143991a44ac
+      internalID: 816767193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_16
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1336
+        width: 196
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833ddb00254b84e40991f77dce1fe561
+      internalID: -572166778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_17
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1331
+        width: 185
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b537cf36865e64a8a2a3ff449cd8d7
+      internalID: -1495263083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_18
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1119
+        width: 210
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325f90718de448940a32d0d6803a2554
+      internalID: 1375712287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_19
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1117
+        width: 205
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43627e9ae7b8eee428e4dfcbff118f35
+      internalID: -1516021329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_20
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1119
+        width: 196
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbec1811fcc69b048920fd5b27b6b44d
+      internalID: 443825537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_21
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1130
+        width: 193
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0936c09452142a04ba7549b48fc115f6
+      internalID: -1121775126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_22
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1124
+        width: 207
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0a34868b9f71f489de2222b5324bb0
+      internalID: -611263585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_23
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 1119
+        width: 200
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a09e4bbca6c4f47acd002d7387c88d
+      internalID: -1154354330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 884
+        width: 181
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1d4ba80b74dd440bba672fd1abe861
+      internalID: 118005541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_25
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 872
+        width: 184
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62a357d8df168d49afd675f6a91cdb6
+      internalID: 1627987711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_26
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 866
+        width: 165
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994f5f44fd036e3408cc73a3131a3547
+      internalID: 1418922779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_27
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 864
+        width: 141
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bd2ae0034a24a4d9f387bb1e13402c
+      internalID: 1666594564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_28
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 891
+        width: 201
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75f063efe863684fb239ca3dd3964d1
+      internalID: 1873051472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_29
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 898
+        width: 190
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9377db4486e18a44bb4941cfcbfb837
+      internalID: 1554868483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_30
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 678
+        width: 201
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69e7fe828acaa4429bdf7289a421db6
+      internalID: 1767357261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_31
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 655
+        width: 177
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d313b97f475b82f49ad01b4b8a269f2a
+      internalID: 270695176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_32
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 652
+        width: 170
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3586e379222f64988022f69e4bcebc
+      internalID: 1873627662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_33
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 649
+        width: 158
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10abc3f6e76e9b34188d02b8bf9192cd
+      internalID: -819315803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_34
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 670
+        width: 222
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6af1ff036ad4047940a05b9423aae3
+      internalID: -1770854956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_35
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 683
+        width: 244
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a162591c9f4eb6541b7ec67ff02971ba
+      internalID: 196905737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_36
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 444
+        width: 181
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9d793aa2bc7bd43b95d7f06ca022bc
+      internalID: -189576358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_37
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 452
+        width: 174
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927646d71d1310140a31be5d9fc13186
+      internalID: 1829432125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_38
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 453
+        width: 170
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfbcdf2236c7e14abf31ed9945c3a14
+      internalID: -785646082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_39
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 453
+        width: 170
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c608020cd729440b7c64ff7067414c
+      internalID: -806930955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_40
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 450
+        width: 174
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e454b03a7ad80da45be57db8dbf2de03
+      internalID: -484811083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_42
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 445
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2752625f215cc649aeb93f838a936ba
+      internalID: 1284729797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_48
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 572
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b6056b0ecb44d43b7b7d6b7ffcb049
+      internalID: 1393262424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_66
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 224
+        width: 166
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b750bf90d2e9743a950f3a696d984c
+      internalID: 16335403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_73
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 244
+        width: 115
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fe435a6f6e58a47a3a99b66a499c7a
+      internalID: -1484279561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_74
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 238
+        width: 201
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0127e24f06e1ac7409d3948457d4ca8d
+      internalID: 1146342549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_75
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 237
+        width: 206
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8e9cb357ad33649a3c1f98908c4840
+      internalID: 282370016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_76
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 237
+        width: 197
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe055c1271b18447ba3731ceabbda28
+      internalID: -600221884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_77
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 234
+        width: 197
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467a1de32342c7a4f9924a7a509c71d1
+      internalID: 1739223352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_82
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 8
+        width: 83
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ee58a9fe0a6b34ab99561d2f0aaaca
+      internalID: -859633247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_83
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 7
+        width: 66
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7058b6334859a240a8b6da74609000a
+      internalID: 1518535448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_85
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 66
+        width: 25
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b253689e891d75489758233ddf53c3f
+      internalID: -115730858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_86
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 84
+        width: 9
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2e5a70e314c2e41978a113fb581a8d
+      internalID: -281617875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_87
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 75
+        width: 15
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720a066439b7dc04e838e0642da7bfd5
+      internalID: 1252893532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_88
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 86
+        width: 17
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8187744caf32e334ba101a15cc7eb33a
+      internalID: 703767025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_89
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 113
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5023d1b9c951d4e83f8f19105ccbc3
+      internalID: 647500367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_90
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 57
+        width: 21
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa3ddd21ef627548a9638e37cd9348d
+      internalID: 1086024516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_91
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 97
+        width: 17
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4719830d8eb9b6489917c71455f9e70
+      internalID: -1074572149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_92
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 71
+        width: 11
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3185de298ea1ae04caa6699c945908a3
+      internalID: -1890185734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_93
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 117
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae5d3815f89f924a9b8cc36ab18704b
+      internalID: 744290521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_94
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 92
+        width: 6
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8f2445ea8929443bdca901311395f5
+      internalID: -1323241601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_95
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 101
+        width: 13
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0436b039946abf4fbe162405630dc59
+      internalID: -1965027000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_96
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 26
+        width: 83
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2d225275c054b49acf604dae49f6e6
+      internalID: -692566236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_97
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 55
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4caaec7a331626740a0585ab8420fa44
+      internalID: 1359822135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_98
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 28
+        width: 52
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6873999c458284d4ba62af4aa54ff795
+      internalID: -486902273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_100
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 62
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74dfa06f8679234e9d993f021c48634
+      internalID: 265193656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_101
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 67
+        width: 5
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5349f4da939c745be2961d9821e027
+      internalID: -583377763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_102
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 49
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d762b03b3ed9cc4f9e545eee73206c0
+      internalID: 502187224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_103
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 35
+        width: 9
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3270540a62c9afa4ebab2fdf5747269a
+      internalID: 1855781954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_104
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 10
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a98f6a18c7b2fd41aa7da37b447f3dd
+      internalID: 1523346251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_105
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 34
+        width: 7
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b83f50cdf81f6c419146c09d883bbcf
+      internalID: 1757501294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_106
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 38
+        width: 8
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8734bcc4a5ac6f439c6b64ab1796262
+      internalID: -269182398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_107
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 51
+        width: 4
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a35765b66625c448c775b5e3474aad
+      internalID: -1224651696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_108
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 59
+        width: 8
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2f96f2f49a86d4ba16ef5aa93ecea0
+      internalID: 338903027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_109
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 69
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045dd73c259c22943b230061409556b1
+      internalID: 374128897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_110
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 66
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd8021611a7c2d4ca42a16d4c23ec15
+      internalID: 1839663928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_111
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 62
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425e9a09a5e6aae4898160921386737a
+      internalID: 1867894759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_112
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 62
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f2722bc3fddba4dba727c9bb5485a3
+      internalID: 870638496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_113
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 50
+        width: 14
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b10ae5053c51724ebcb1bec17905f4f
+      internalID: 1642359640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_114
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 29
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54345d53103b37d41a1372b1b623a6e6
+      internalID: 1230051270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_115
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 50
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67811abed3c8e04b9416ac08b25983d
+      internalID: 1152147094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_116
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 74
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f95f6b7e27b2c941ac26baf954386ba
+      internalID: -1955075382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_117
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 68
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2818c2266f30ab74a8f78ad5f3df21e1
+      internalID: -1655167679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_118
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 52
+        width: 7
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1584873f21c20e040bfbdd0cf0afadbc
+      internalID: -169721512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_119
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 21
+        width: 16
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124d00c12a7dae4478163f0d375f9367
+      internalID: 1082597383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_120
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 80
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4cf3af6032f3c438825574c9be65eb
+      internalID: 1526926059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit SeekPng.com_shadow-monster-png_9040521_121
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 80
+        width: 5
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fecf79da4534a74b9c93224bb98f764
+      internalID: 1263635940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Edit SeekPng.com_shadow-monster-png_9040521_0: -1771613510
+      Edit SeekPng.com_shadow-monster-png_9040521_1: 788592033
+      Edit SeekPng.com_shadow-monster-png_9040521_10: -1360999592
+      Edit SeekPng.com_shadow-monster-png_9040521_100: 265193656
+      Edit SeekPng.com_shadow-monster-png_9040521_101: -583377763
+      Edit SeekPng.com_shadow-monster-png_9040521_102: 502187224
+      Edit SeekPng.com_shadow-monster-png_9040521_103: 1855781954
+      Edit SeekPng.com_shadow-monster-png_9040521_104: 1523346251
+      Edit SeekPng.com_shadow-monster-png_9040521_105: 1757501294
+      Edit SeekPng.com_shadow-monster-png_9040521_106: -269182398
+      Edit SeekPng.com_shadow-monster-png_9040521_107: -1224651696
+      Edit SeekPng.com_shadow-monster-png_9040521_108: 338903027
+      Edit SeekPng.com_shadow-monster-png_9040521_109: 374128897
+      Edit SeekPng.com_shadow-monster-png_9040521_11: -1066550694
+      Edit SeekPng.com_shadow-monster-png_9040521_110: 1839663928
+      Edit SeekPng.com_shadow-monster-png_9040521_111: 1867894759
+      Edit SeekPng.com_shadow-monster-png_9040521_112: 870638496
+      Edit SeekPng.com_shadow-monster-png_9040521_113: 1642359640
+      Edit SeekPng.com_shadow-monster-png_9040521_114: 1230051270
+      Edit SeekPng.com_shadow-monster-png_9040521_115: 1152147094
+      Edit SeekPng.com_shadow-monster-png_9040521_116: -1955075382
+      Edit SeekPng.com_shadow-monster-png_9040521_117: -1655167679
+      Edit SeekPng.com_shadow-monster-png_9040521_118: -169721512
+      Edit SeekPng.com_shadow-monster-png_9040521_119: 1082597383
+      Edit SeekPng.com_shadow-monster-png_9040521_12: -1931771127
+      Edit SeekPng.com_shadow-monster-png_9040521_120: 1526926059
+      Edit SeekPng.com_shadow-monster-png_9040521_121: 1263635940
+      Edit SeekPng.com_shadow-monster-png_9040521_122: 1290791932
+      Edit SeekPng.com_shadow-monster-png_9040521_13: -868222108
+      Edit SeekPng.com_shadow-monster-png_9040521_14: 314110740
+      Edit SeekPng.com_shadow-monster-png_9040521_15: 816767193
+      Edit SeekPng.com_shadow-monster-png_9040521_16: -572166778
+      Edit SeekPng.com_shadow-monster-png_9040521_17: -1495263083
+      Edit SeekPng.com_shadow-monster-png_9040521_18: 1375712287
+      Edit SeekPng.com_shadow-monster-png_9040521_19: -1516021329
+      Edit SeekPng.com_shadow-monster-png_9040521_2: -393602764
+      Edit SeekPng.com_shadow-monster-png_9040521_20: 443825537
+      Edit SeekPng.com_shadow-monster-png_9040521_21: -1121775126
+      Edit SeekPng.com_shadow-monster-png_9040521_22: -611263585
+      Edit SeekPng.com_shadow-monster-png_9040521_23: -1154354330
+      Edit SeekPng.com_shadow-monster-png_9040521_24: 118005541
+      Edit SeekPng.com_shadow-monster-png_9040521_25: 1627987711
+      Edit SeekPng.com_shadow-monster-png_9040521_26: 1418922779
+      Edit SeekPng.com_shadow-monster-png_9040521_27: 1666594564
+      Edit SeekPng.com_shadow-monster-png_9040521_28: 1873051472
+      Edit SeekPng.com_shadow-monster-png_9040521_29: 1554868483
+      Edit SeekPng.com_shadow-monster-png_9040521_3: 1235408182
+      Edit SeekPng.com_shadow-monster-png_9040521_30: 1767357261
+      Edit SeekPng.com_shadow-monster-png_9040521_31: 270695176
+      Edit SeekPng.com_shadow-monster-png_9040521_32: 1873627662
+      Edit SeekPng.com_shadow-monster-png_9040521_33: -819315803
+      Edit SeekPng.com_shadow-monster-png_9040521_34: -1770854956
+      Edit SeekPng.com_shadow-monster-png_9040521_35: 196905737
+      Edit SeekPng.com_shadow-monster-png_9040521_36: -189576358
+      Edit SeekPng.com_shadow-monster-png_9040521_37: 1829432125
+      Edit SeekPng.com_shadow-monster-png_9040521_38: -785646082
+      Edit SeekPng.com_shadow-monster-png_9040521_39: -806930955
+      Edit SeekPng.com_shadow-monster-png_9040521_4: 1743941324
+      Edit SeekPng.com_shadow-monster-png_9040521_40: -484811083
+      Edit SeekPng.com_shadow-monster-png_9040521_41: 904405575
+      Edit SeekPng.com_shadow-monster-png_9040521_42: 1284729797
+      Edit SeekPng.com_shadow-monster-png_9040521_43: -2103501905
+      Edit SeekPng.com_shadow-monster-png_9040521_44: 1163498915
+      Edit SeekPng.com_shadow-monster-png_9040521_45: 941160640
+      Edit SeekPng.com_shadow-monster-png_9040521_46: 979741474
+      Edit SeekPng.com_shadow-monster-png_9040521_47: -1000677668
+      Edit SeekPng.com_shadow-monster-png_9040521_48: 1393262424
+      Edit SeekPng.com_shadow-monster-png_9040521_49: 346240458
+      Edit SeekPng.com_shadow-monster-png_9040521_5: -1582311801
+      Edit SeekPng.com_shadow-monster-png_9040521_50: 891206782
+      Edit SeekPng.com_shadow-monster-png_9040521_51: -1153331587
+      Edit SeekPng.com_shadow-monster-png_9040521_52: -1803605794
+      Edit SeekPng.com_shadow-monster-png_9040521_53: -975665176
+      Edit SeekPng.com_shadow-monster-png_9040521_54: -865851867
+      Edit SeekPng.com_shadow-monster-png_9040521_55: -1386608188
+      Edit SeekPng.com_shadow-monster-png_9040521_56: 262907904
+      Edit SeekPng.com_shadow-monster-png_9040521_57: 954355396
+      Edit SeekPng.com_shadow-monster-png_9040521_58: 954687879
+      Edit SeekPng.com_shadow-monster-png_9040521_59: 1966961679
+      Edit SeekPng.com_shadow-monster-png_9040521_6: -1650871531
+      Edit SeekPng.com_shadow-monster-png_9040521_60: 973111224
+      Edit SeekPng.com_shadow-monster-png_9040521_61: 809037864
+      Edit SeekPng.com_shadow-monster-png_9040521_62: 1967134685
+      Edit SeekPng.com_shadow-monster-png_9040521_63: -1419114586
+      Edit SeekPng.com_shadow-monster-png_9040521_64: 843757242
+      Edit SeekPng.com_shadow-monster-png_9040521_65: 393459990
+      Edit SeekPng.com_shadow-monster-png_9040521_66: 16335403
+      Edit SeekPng.com_shadow-monster-png_9040521_67: 1946709604
+      Edit SeekPng.com_shadow-monster-png_9040521_68: 697780973
+      Edit SeekPng.com_shadow-monster-png_9040521_69: -755105623
+      Edit SeekPng.com_shadow-monster-png_9040521_7: -1993494397
+      Edit SeekPng.com_shadow-monster-png_9040521_70: 442878037
+      Edit SeekPng.com_shadow-monster-png_9040521_71: -135475353
+      Edit SeekPng.com_shadow-monster-png_9040521_72: 368902111
+      Edit SeekPng.com_shadow-monster-png_9040521_73: -1484279561
+      Edit SeekPng.com_shadow-monster-png_9040521_74: 1146342549
+      Edit SeekPng.com_shadow-monster-png_9040521_75: 282370016
+      Edit SeekPng.com_shadow-monster-png_9040521_76: -600221884
+      Edit SeekPng.com_shadow-monster-png_9040521_77: 1739223352
+      Edit SeekPng.com_shadow-monster-png_9040521_78: -1072398237
+      Edit SeekPng.com_shadow-monster-png_9040521_79: 20871702
+      Edit SeekPng.com_shadow-monster-png_9040521_8: -2036971493
+      Edit SeekPng.com_shadow-monster-png_9040521_80: -1239149614
+      Edit SeekPng.com_shadow-monster-png_9040521_81: -127095417
+      Edit SeekPng.com_shadow-monster-png_9040521_82: -859633247
+      Edit SeekPng.com_shadow-monster-png_9040521_83: 1518535448
+      Edit SeekPng.com_shadow-monster-png_9040521_84: 395715979
+      Edit SeekPng.com_shadow-monster-png_9040521_85: -115730858
+      Edit SeekPng.com_shadow-monster-png_9040521_86: -281617875
+      Edit SeekPng.com_shadow-monster-png_9040521_87: 1252893532
+      Edit SeekPng.com_shadow-monster-png_9040521_88: 703767025
+      Edit SeekPng.com_shadow-monster-png_9040521_89: 647500367
+      Edit SeekPng.com_shadow-monster-png_9040521_9: -1329347843
+      Edit SeekPng.com_shadow-monster-png_9040521_90: 1086024516
+      Edit SeekPng.com_shadow-monster-png_9040521_91: -1074572149
+      Edit SeekPng.com_shadow-monster-png_9040521_92: -1890185734
+      Edit SeekPng.com_shadow-monster-png_9040521_93: 744290521
+      Edit SeekPng.com_shadow-monster-png_9040521_94: -1323241601
+      Edit SeekPng.com_shadow-monster-png_9040521_95: -1965027000
+      Edit SeekPng.com_shadow-monster-png_9040521_96: -692566236
+      Edit SeekPng.com_shadow-monster-png_9040521_97: 1359822135
+      Edit SeekPng.com_shadow-monster-png_9040521_98: -486902273
+      Edit SeekPng.com_shadow-monster-png_9040521_99: -121047616
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
