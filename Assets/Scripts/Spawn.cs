@@ -5,7 +5,7 @@ using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Spawn: MonoBehaviour
+public class Spawn : MonoBehaviour
 {
 
     // Variable to store the enemy prefab
