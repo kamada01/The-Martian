@@ -7,39 +7,29 @@ public class MinotaurMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCD;
-    [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private float vision;
-    [SerializeField] private Astronaut player;
-    
+    [SerializeField] public Transform player;
 
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private float HP = 12;
+    private int HP = 10;
+    private int damage = 5;
+
 
     Animator animator;
+
     private Rigidbody2D rb;
     private RaycastHit2D hit;
 
-    private pistal pistal;
-    private shotGun mbullet;
-    private laserGun laser;
     private KillCount killcountscript;
-    private void Start()
-    {
-        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
-        pistal = (pistal)FindObjectOfType(typeof(pistal));
-        mbullet = (shotGun)FindObjectOfType(typeof(shotGun));
-        laser = (laserGun)FindObjectOfType(typeof(laserGun));
-        killcountscript = GameObject.Find("KillCount").GetComponent<KillCount>();
-    }
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-
+        killcountscript = GameObject.Find("KillCount").GetComponent<KillCount>();
     }
 
     private void Update()
@@ -69,15 +59,12 @@ public class MinotaurMovement : MonoBehaviour
         // Wait for 1 second 
         yield return new WaitForSeconds(1f);
         // only reduce player's HP if the player is still within the attacking range after 1 sec
-        /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
             DamagePlayer(damage);
-            //debug message
-            Debug.Log("Attack causes damage");
-        }*/
-        DamagePlayer(damage);
+            //Debug.Log("Attack causes damage");
+        }
     }
 
     private bool PlayerWithinAttackRange()
@@ -107,39 +94,33 @@ public class MinotaurMovement : MonoBehaviour
     }
 
     private void DamagePlayer(int damageCaused)
-    {
-        //To be implement after setting up the player's hp  
-        player.TakingDamage(damageCaused);
+    {//use the TakingDamage method in player
+        player.GetComponent<Astronaut>().TakingDamage(damageCaused);
         player.damagePopup(damageCaused);
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TakingDamage(int damageTaken)
     {
-        Vector3 CurPos = gameObject.transform.position;
-        CurPos.y += 1;
-        if (collision.CompareTag("PistolBullet"))
-        {
-            HP -= pistal.damage;
-            DamagePopup.Create(CurPos, pistal.damage);
-        }
-        else if (collision.CompareTag("mbullet"))
-        {
-            HP -= shotGun.damage;
-            DamagePopup.Create(CurPos, shotGun.damage);
-        } else if (collision.CompareTag("laser"))
-        {
-            HP -= laserGun.damage;
-            DamagePopup.Create(CurPos, laserGun.damage);
-        }
+        animator.SetTrigger("hurt");
+        HP = HP - damageTaken;
+        //Debug.Log("Hurt by Player. Current HP: " + HP);
 
         if (HP <= 0)
-        {
-            Destroy(gameObject);
-            killcountscript.AddKill();
-
+        {   //stopped all the movement
+            DirectionToPlayer = Vector2.zero;
+            rb.velocity = Vector2.zero;
+            animator.SetTrigger("death");
+            //Debug.Log("Death Triggered ");
         }
     }
+
+    public void DestroyAfterAnimation()
+    {   //called by the last frame in the Death animation clip
+        Destroy(gameObject);
+    }
+
+
     private void MovingTowardsPlayer() { 
         if (AwareOfPlayer())
         {
@@ -171,7 +152,7 @@ public class MinotaurMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
+        Vector2 enemyToPlayerVector = player.position - transform.position;
 
         if (enemyToPlayerVector.magnitude <= vision)
         {
@@ -185,13 +166,19 @@ public class MinotaurMovement : MonoBehaviour
 
     }
 
+    public void SetPlayer(Transform playerObject)
+    {//only used by the Spawn to pass its player object
+        player = playerObject;
+
+    }
+
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             gameObject.GetComponent<Rigidbody2D>().drag = 100;
         }
-        
+
     }
 
     public void OnCollisionExit2D(Collision2D collision)
@@ -201,4 +188,5 @@ public class MinotaurMovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().drag = 0;
         }
     }
+
 }
