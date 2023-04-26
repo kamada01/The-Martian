@@ -8,7 +8,6 @@ public class BetaMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCD;
-    [SerializeField] private float damage;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private float vision;
     [SerializeField] public Transform player;
@@ -16,7 +15,8 @@ public class BetaMovement : MonoBehaviour
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private float HP;
+    private int HP = 2;
+    private int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;
@@ -26,7 +26,6 @@ public class BetaMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        HP = 1;
 
     }
 
@@ -42,14 +41,6 @@ public class BetaMovement : MonoBehaviour
                 //Debug.Log("Launching attack");
 
                 animator.SetTrigger("attack");
-                //animator.SetBool("isAttacking", true);
-                /*if (hit.collider != null && hit.collider.CompareTag("Player"))
-                {
-                    //Reduce Player's HP in a sub
-
-                    //debug message
-                    Debug.Log("Attack causes damage");
-                }*/
                 StartCoroutine(AttackPlayer());
             }
         }
@@ -67,8 +58,7 @@ public class BetaMovement : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
-            //DamagePlayer(damage);
-            //debug message
+            DamagePlayer(damage);
             //Debug.Log("Attack causes damage");
         }
     }
@@ -101,12 +91,12 @@ public class BetaMovement : MonoBehaviour
             capsuleCollider.bounds.size* 0.7f);
     }
 
-    private void DamagePlayer(float damageCaused)
+    private void DamagePlayer(int damageCaused)
     {
-        //To be implement after setting up the player's hp codes
+        player.GetComponent<Astronaut>().TakingDamage(damageCaused);
     }
 
-    public void TakingDamage(float damageTaken)
+    public void TakingDamage(int damageTaken)
     {
         //To be implement after settig up the player's weapons
         HP = HP - damageTaken;

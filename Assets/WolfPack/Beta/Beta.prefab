@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7552922381811226455}
   m_Layer: 0
   m_Name: Beta
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -339757528, guid: 35e95e864c521a74eaf3bd209c705792, type: 3}
+  m_Sprite: {fileID: -339757528, guid: b57e23a2a33758446a1e891ca90ee5a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +124,6 @@ MonoBehaviour:
   speed: 15
   attackRange: 0.3
   attackCD: 1
-  damage: 1
   capsuleCollider: {fileID: 7552922381811226455}
   vision: 10
   player: {fileID: 0}
