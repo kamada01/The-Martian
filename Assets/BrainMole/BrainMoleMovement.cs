@@ -7,36 +7,26 @@ public class BrainMoleMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCD;
-    [SerializeField] private int damage;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private float vision;
-    [SerializeField] private Astronaut player;
+    [SerializeField] private Transform player;
 
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private float HP;
+    private int HP = 1;
+    private int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;
-    //private BrainMoleVisionController visionController;
-    //private Vector2 targetDirection;
     private RaycastHit2D hit;
-
     private KillCount killcount;
-    private void Start()
-    {
-        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
-        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
-    }
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        //visionController = GetComponent<BrainMoleVisionController>();
-        HP = 1;    
-
+        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
     }
 
     private void Update()
@@ -62,19 +52,15 @@ public class BrainMoleMovement : MonoBehaviour
 
     private IEnumerator AttackPlayer()
     {
-        // Wait for 0.5 second 
-        yield return new WaitForSeconds(0.5f);
-        // only reduce player's HP if the player is still within the attacking range after 1 sec
-        /*
+        // Wait for 0.2 second 
+        yield return new WaitForSeconds(0.2f);
+        // only reduce player's HP if the player is still within the attacking range after 0.2 sec
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
-            //DamagePlayer(damage);
-            //debug message
+            DamagePlayer(damage);
             //Debug.Log("Attack causes damage");
         }
-        */
-        DamagePlayer(damage);
     }
 
 
@@ -106,40 +92,29 @@ public class BrainMoleMovement : MonoBehaviour
     }
 
     private void DamagePlayer(int damageCaused)
-    {
-        player.TakingDamage(damageCaused);
+    {//use the TakingDamage method in player
+        player.GetComponent<Astronaut>().TakingDamage(damageCaused);
         player.damagePopup(damageCaused);
     }
 
-
-    // Taking damage
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TakingDamage(int damageTaken)
     {
-        Debug.Log(collision.gameObject.tag);
-        Vector3 CurPos = gameObject.transform.position;
-        CurPos.y += 1;
-        if (collision.CompareTag("PistolBullet"))
-        {
-            HP -= pistal.damage;
-            DamagePopup.Create(CurPos, pistal.damage);
-        }
-        else if (collision.CompareTag("mbullet"))
-        {
-            HP -= shotGun.damage;
-            DamagePopup.Create(CurPos, shotGun.damage);
-        }
-        else if (collision.CompareTag("laser"))
-        {
-            HP -= laserGun.damage;
-            DamagePopup.Create(CurPos, laserGun.damage);
-        }
+        animator.SetTrigger("hurt");
+        HP = HP - damageTaken;
+        //Debug.Log("Hurt by Player. Current HP: " + HP);
 
         if (HP <= 0)
-        {
-            Destroy(gameObject);
-            killcount.AddKill();
-
+        {   //stopped all the movement
+            DirectionToPlayer = Vector2.zero;
+            rb.velocity = Vector2.zero;
+            animator.SetTrigger("death");
+            Debug.Log("BrainMole Death Triggered ");
         }
+    }
+
+    public void DestroyAfterAnimation()
+    {   //called by the last frame in the Death animation clip
+        Destroy(gameObject);
     }
 
     private void MovingTowardsPlayer() {
@@ -173,7 +148,7 @@ public class BrainMoleMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
+        Vector2 enemyToPlayerVector = player.position - transform.position;
         if (enemyToPlayerVector.magnitude <= vision)
         {
             DirectionToPlayer = enemyToPlayerVector.normalized;
@@ -183,6 +158,12 @@ public class BrainMoleMovement : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void SetPlayer(Transform playerObject)
+    {//only used by the Spawn to pass its player object
+        player = playerObject;
+
     }
 
     public void OnCollisionStay2D(Collision2D collision)
