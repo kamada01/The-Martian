@@ -4,8 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
   - Weapon
-  - Minotaur
+  - GunBody
+  - GunSight
+  - GunBarrel
+  - GunMuzzle
+  - GunClip
+  - GunProjectile
+  - Wall
+  - GunStock
+  - SmokeTrail
+  - Spawner
+  - GunFlash
   layers:
   - Default
   - TransparentFX
@@ -15,7 +26,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -40,18 +51,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 2561796277
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Astronaut
-    uniqueID: 1865017811
-    locked: 0
-  - name: Weapons
-    uniqueID: 2389650267
-    locked: 0
-  - name: Top
-    uniqueID: 3576513943
+  - name: weapon
+    uniqueID: 631626917
     locked: 0
