@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 public class MenuControl : MonoBehaviour
 {
     [Header("Games to Load")]
-    public string _newGame;
     private string GameToLoad;
     [SerializeField] private GameObject NoSaveGame = null;
+    public Astronaut player;
 
     public void NewGameYes()
     {
-        SceneManager.LoadScene(_newGame);
+        SceneManager.LoadScene("SampleScene_1");
+        player = (Astronaut)FindAnyObjectByType(typeof(Astronaut));
+        Debug.Log(Astronaut.CurHealth);
     }
 
     public void LoadGameYes()

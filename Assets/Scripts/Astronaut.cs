@@ -28,6 +28,11 @@ public class Astronaut : MonoBehaviour
     private Vector3 topRightL;
     private Vector3 bottomLeftL;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        CurHealth = MaxHealth;
+    }
     void Start()
     {
         inventory.UsedItem += Inventory_UsedItem;

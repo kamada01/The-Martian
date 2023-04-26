@@ -54,7 +54,7 @@ public class bulletScript : MonoBehaviour
             Component enemyScript = collision.gameObject.GetComponent(enemyScriptName);
             if (enemyScript != null)
             {
-                Debug.Log("Damage Enemy using method.");
+                //Debug.Log("Damage Enemy using method.");
                 enemyScript.SendMessage("TakingDamage", damage);
             }
 

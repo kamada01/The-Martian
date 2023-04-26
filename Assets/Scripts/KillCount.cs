@@ -17,6 +17,11 @@ public class KillCount : MonoBehaviour
     {
         counter.text = kills.ToString();
     }
+
+    public void ResetKills()
+    {
+        kills = 0;
+    }
 }
 
 
