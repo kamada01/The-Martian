@@ -11,7 +11,7 @@ public class AlphaMovement : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] GameObject beta;
     [SerializeField] private float vision;
-    [SerializeField] private Transform player;
+    [SerializeField] private Astronaut player;
     GameObject memberA, memberB;
 
     private Vector2 DirectionToPlayer;
@@ -22,6 +22,11 @@ public class AlphaMovement : MonoBehaviour
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
+
+    private void Start()
+    {
+        player = (Astronaut)FindObjectOfType(typeof(Astronaut));    
+    }
 
     private void Awake()
     {
@@ -60,6 +65,7 @@ public class AlphaMovement : MonoBehaviour
         // Wait for 1 second 
         yield return new WaitForSeconds(1f);
         // only reduce player's HP if the player is still within the attacking range after 1 sec
+        /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
@@ -67,6 +73,8 @@ public class AlphaMovement : MonoBehaviour
             //debug message
             //Debug.Log("Attack causes damage");
         }
+        */
+        DamagePlayer(damage);
     }
 
     private bool PlayerWithinAttackRange()
@@ -78,7 +86,7 @@ public class AlphaMovement : MonoBehaviour
 
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
-            Debug.Log("Player within attack range.");
+            //Debug.Log("Player within attack range.");
             return true;
         }
         else
@@ -96,9 +104,11 @@ public class AlphaMovement : MonoBehaviour
             boxCollider.bounds.size * 0.6f);
     }
 
-    private void DamagePlayer(float damageCaused)
+    private void DamagePlayer(int damageCaused)
     {
         //To be implement after setting up the player's hp codes
+        player.TakingDamage(damageCaused);
+        player.damagePopup(damageCaused);
     }
 
     public void TakingDamage(float damageTaken)
@@ -147,7 +157,7 @@ public class AlphaMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.position - transform.position;
+        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
 
         if (enemyToPlayerVector.magnitude <= vision)
         {

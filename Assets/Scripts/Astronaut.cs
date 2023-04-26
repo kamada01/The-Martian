@@ -137,4 +137,11 @@ public class Astronaut : MonoBehaviour
         }
 
     }
+
+    public void damagePopup(int damage)
+    {
+        Vector3 CurPos = gameObject.transform.position;
+        CurPos.y += 1;
+        DamagePopup.Create(CurPos, damage);
+    }
 }

@@ -10,7 +10,7 @@ public class BetaMovement : MonoBehaviour
     [SerializeField] private float attackCD;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private float vision;
-    [SerializeField] public Transform player;
+    [SerializeField] public Astronaut player;
 
     private Vector2 DirectionToPlayer;
 
@@ -21,6 +21,11 @@ public class BetaMovement : MonoBehaviour
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
+
+    private void Start()
+    {
+        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
+    }
 
     private void Awake()
     {
@@ -55,12 +60,15 @@ public class BetaMovement : MonoBehaviour
         // Wait for 0.3 second 
         yield return new WaitForSeconds(0.3f);
         // only reduce player's HP if the player is still within the attacking range
+        /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
             DamagePlayer(damage);
             //Debug.Log("Attack causes damage");
         }
+        */
+        DamagePlayer(damage);
     }
 
 
@@ -93,7 +101,8 @@ public class BetaMovement : MonoBehaviour
 
     private void DamagePlayer(int damageCaused)
     {
-        player.GetComponent<Astronaut>().TakingDamage(damageCaused);
+        player.TakingDamage(damageCaused);
+        player.damagePopup(damageCaused);
     }
 
     public void TakingDamage(int damageTaken)
@@ -137,7 +146,7 @@ public class BetaMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.position - transform.position;
+        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
         if (enemyToPlayerVector.magnitude <= vision)
         {
             DirectionToPlayer = enemyToPlayerVector.normalized;

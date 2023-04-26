@@ -10,7 +10,7 @@ public class BrainMoleMovement : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private float vision;
-    [SerializeField] private Transform player;
+    [SerializeField] private Astronaut player;
 
     private Vector2 DirectionToPlayer;
 
@@ -22,6 +22,10 @@ public class BrainMoleMovement : MonoBehaviour
     //private BrainMoleVisionController visionController;
     //private Vector2 targetDirection;
     private RaycastHit2D hit;
+    private void Start()
+    {
+        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
+    }
 
     private void Awake()
     {
@@ -58,6 +62,7 @@ public class BrainMoleMovement : MonoBehaviour
         // Wait for 0.5 second 
         yield return new WaitForSeconds(0.5f);
         // only reduce player's HP if the player is still within the attacking range after 1 sec
+        /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
@@ -65,6 +70,8 @@ public class BrainMoleMovement : MonoBehaviour
             //debug message
             //Debug.Log("Attack causes damage");
         }
+        */
+        DamagePlayer(damage);
     }
 
 
@@ -95,9 +102,10 @@ public class BrainMoleMovement : MonoBehaviour
             capsuleCollider.bounds.size* 0.5f);
     }
 
-    private void DamagePlayer()
+    private void DamagePlayer(int damageCaused)
     {
-        //To be implement after setting up the player's hp codes
+        player.TakingDamage(damageCaused);
+        player.damagePopup(damageCaused);
     }
 
     public void TakingDamage(float damageTaken)
@@ -142,7 +150,7 @@ public class BrainMoleMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.position - transform.position;
+        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
         if (enemyToPlayerVector.magnitude <= vision)
         {
             DirectionToPlayer = enemyToPlayerVector.normalized;

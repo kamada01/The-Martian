@@ -60,7 +60,6 @@ public class MinotaurMovement : MonoBehaviour
         // Wait for 1 second 
         yield return new WaitForSeconds(1f);
         // only reduce player's HP if the player is still within the attacking range after 1 sec
-        Debug.Log(hit.collider.name);
         /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
@@ -100,15 +99,14 @@ public class MinotaurMovement : MonoBehaviour
 
     private void DamagePlayer(int damageCaused)
     {
-        //To be implement after setting up the player's hp 
-        Debug.Log("Hit player");    
+        //To be implement after setting up the player's hp  
         player.TakingDamage(damageCaused);
         player.damagePopup(damageCaused);
     }
 
     public void TakingDamage(int damageTaken)
     {
-        //To be implement after settig up the player's weapons
+        
         HP = HP - damageTaken;
 
         if (HP <= 0)
