@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9168250487001388970}
   m_Layer: 0
   m_Name: Alpha
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,6 @@ MonoBehaviour:
   speed: 15
   attackRange: 0.4
   attackCD: 2
-  damage: 1
   boxCollider: {fileID: 9168250487001388970}
   beta: {fileID: 8150591245283411799, guid: c81ce7f65b092414cbaa454632c63b41, type: 3}
   vision: 10
