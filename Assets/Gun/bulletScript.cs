@@ -40,7 +40,7 @@ public class bulletScript : MonoBehaviour
             string enemyName = collision.gameObject.name;
             if (enemyName.Contains("(Clone)"))
             {
-                enemyName = enemyName.Replace(" (Clone)", "");
+                enemyName = enemyName.Replace("(Clone)", "");
             }
             //process the name so that it matches the name of the script
             string enemyScriptName = enemyName + "Movement";
