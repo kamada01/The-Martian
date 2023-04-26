@@ -11,6 +11,7 @@ public class pistal : MonoBehaviour
     public int bulletSpeed = 10;
     public AudioClip gunshotSound;
     private AudioSource audioSource;
+    public static int damage = 3;
 
     // Start is called before the first frame update
     void Start()

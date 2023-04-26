@@ -9,8 +9,8 @@ public class KillCount : MonoBehaviour
 
     public void AddKill()
     {
-
         kills++;
+        ShowKills();
     }
 
     public void ShowKills()

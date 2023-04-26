@@ -11,6 +11,7 @@ public class MinotaurMovement : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private float vision;
     [SerializeField] private Astronaut player;
+    
 
     private Vector2 DirectionToPlayer;
 
@@ -21,9 +22,13 @@ public class MinotaurMovement : MonoBehaviour
     private Rigidbody2D rb;
     private RaycastHit2D hit;
 
+    private pistal pistal;
+    private KillCount killcountscript;
     private void Start()
     {
         player = (Astronaut)FindObjectOfType(typeof(Astronaut));
+        pistal = (pistal)FindObjectOfType(typeof(pistal));
+        killcountscript = GameObject.Find("KillCount").GetComponent<KillCount>();
     }
 
     private void Awake()
@@ -104,17 +109,25 @@ public class MinotaurMovement : MonoBehaviour
         player.damagePopup(damageCaused);
     }
 
-    public void TakingDamage(int damageTaken)
-    {
-        
-        HP = HP - damageTaken;
 
-        if (HP <= 0)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.transform.tag);
+        if (collision.CompareTag("PistolBullet"))
         {
-            Destroy(gameObject);
+            HP -= pistal.damage;
+            Vector3 CurPos = gameObject.transform.position;
+            CurPos.y += 1;
+            DamagePopup.Create(CurPos, pistal.damage);
+
+            if (HP <= 0)
+            {
+                Destroy(gameObject);
+                killcountscript.AddKill();
+
+            }
         }
     }
-
     private void MovingTowardsPlayer() { 
         if (AwareOfPlayer())
         {

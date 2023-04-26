@@ -27,4 +27,12 @@ public class bulletScript : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Minotaur"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

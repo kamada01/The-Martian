@@ -73,6 +73,7 @@ public class Astronaut : MonoBehaviour
 
         healthBar.SetHealth(CurHealth);
 
+        /* Testing damagepopup
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Input.mousePosition;
@@ -80,6 +81,7 @@ public class Astronaut : MonoBehaviour
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
             DamagePopup.Create(worldPosition, 100);
         }
+        */
 
     }
 

@@ -18,6 +18,7 @@ TagManager:
   - Spawner
   - GunFlash
   - Minotaur
+  - PistolBullet
   layers:
   - Default
   - TransparentFX
