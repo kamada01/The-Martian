@@ -17,7 +17,7 @@ public class Astronaut : MonoBehaviour
     public GameObject Hand;
 
     public int MaxHealth = 100;
-    private static int CurHealth = 100;
+    public static int CurHealth = 100;
     public HealthBar healthBar;
 
     public Animator animator;
@@ -129,25 +129,12 @@ public class Astronaut : MonoBehaviour
 
     public void TakingDamage(int damageTaken)
     {
-        CurHealth -= damageTaken;
-        Debug.Log("Cur health = " + CurHealth.ToString());
-        healthBar.SetHealth(CurHealth);
+        CurHealth = CurHealth - damageTaken;
 
         if (CurHealth <= 0)
         {
             animator.SetBool("die", true);
         }
 
-    }
-    public float GetHealth()
-    {
-        return CurHealth;
-    }
-
-    public void damagePopup(int n)
-    {
-        Vector3 curPos = gameObject.transform.position;
-        curPos.y += 1;
-        DamagePopup.Create(curPos, n);
     }
 }
