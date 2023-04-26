@@ -36,6 +36,8 @@ public class bulletScript : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
+            Vector3 CurPos = gameObject.transform.position;
+            DamagePopup.Create(CurPos, damage);
             //get the name of the enemy
             string enemyName = collision.gameObject.name;
             if (enemyName.Contains("(Clone)"))

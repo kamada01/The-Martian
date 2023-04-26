@@ -112,6 +112,8 @@ public class MinotaurMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.SetTrigger("death");
             //Debug.Log("Death Triggered ");
+            //Increment kill count
+            killcountscript.AddKill();
         }
     }
 

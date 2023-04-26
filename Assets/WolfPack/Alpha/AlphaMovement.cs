@@ -24,6 +24,11 @@ public class AlphaMovement : MonoBehaviour
     private RaycastHit2D hit;
     private KillCount killcount;
 
+    private void Start()
+    {
+        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -217,13 +222,17 @@ public class AlphaMovement : MonoBehaviour
 
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+    }
+
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             gameObject.GetComponent<Rigidbody2D>().drag = 100;
-        }
-
+        } 
     }
 
     public void OnCollisionExit2D(Collision2D collision)

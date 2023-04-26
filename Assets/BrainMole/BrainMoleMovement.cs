@@ -108,7 +108,8 @@ public class BrainMoleMovement : MonoBehaviour
             DirectionToPlayer = Vector2.zero;
             rb.velocity = Vector2.zero;
             animator.SetTrigger("death");
-            Debug.Log("BrainMole Death Triggered ");
+            //Increment kill count
+            killcount.AddKill();
         }
     }
 

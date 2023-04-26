@@ -22,6 +22,12 @@ public class BetaMovement : MonoBehaviour
     private Rigidbody2D rb;
     private RaycastHit2D hit;
 
+    private KillCount killcount;
+
+    private void Start()
+    {
+        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
+    }
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -108,6 +114,7 @@ public class BetaMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.SetTrigger("death");
             //Debug.Log("Death Triggered ");
+            killcount.AddKill();
         }
     }
 
