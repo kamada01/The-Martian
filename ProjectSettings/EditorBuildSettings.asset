@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene_1.unity
     guid: 0bb9c4be212339f48ad51907ee6f1250
+  - enabled: 1
+    path: Assets/Scenes/GameLost.unity
+    guid: 05015830627556144b856a49202c558c
   m_configObjects: {}

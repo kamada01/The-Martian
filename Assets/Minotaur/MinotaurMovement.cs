@@ -96,7 +96,7 @@ public class MinotaurMovement : MonoBehaviour
     private void DamagePlayer(int damageCaused)
     {//use the TakingDamage method in player
         player.GetComponent<Astronaut>().TakingDamage(damageCaused);
-        player.damagePopup(damageCaused);
+        player.GetComponent<Astronaut>().damagePopup(damageCaused);
     }
 
 

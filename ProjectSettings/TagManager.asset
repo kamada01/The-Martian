@@ -21,6 +21,8 @@ TagManager:
   - PistolBullet
   - KillCount
   - Brainmole
+  - laser
+  - mbullet
   layers:
   - Default
   - TransparentFX
