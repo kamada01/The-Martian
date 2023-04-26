@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class bulletScript : MonoBehaviour
-{    
+{
+
+    public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +31,35 @@ public class bulletScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Minotaur") || collision.CompareTag("Brainmole") || collision.CompareTag("Enemy"))
+
+        if (collision.CompareTag("Enemy"))
         {
+            //get the name of the enemy
+            string enemyName = collision.gameObject.name;
+            if (enemyName.Contains("(Clone)"))
+            {
+                enemyName = enemyName.Replace(" (Clone)", "");
+            }
+            //process the name so that it matches the name of the script
+            string enemyScriptName = enemyName + "Movement";
+            enemyScriptName = enemyScriptName.Replace(" ", "");
+
+            //Debug.Log("accessing script: " + enemyScriptName + " of " + enemyName + ".");
+
+            //access the script
+            Component enemyScript = collision.gameObject.GetComponent(enemyScriptName);
+            if (enemyScript != null)
+            {
+                Debug.Log("Damage Enemy using method.");
+                enemyScript.SendMessage("TakingDamage", damage);
+            }
+
             Destroy(gameObject);
         }
+
+
     }
+
 }
