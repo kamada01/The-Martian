@@ -126,4 +126,15 @@ public class Astronaut : MonoBehaviour
             inventory.AddItem(item);
         }        
     }
+
+    public void TakingDamage(int damageTaken)
+    {
+        CurHealth = CurHealth - damageTaken;
+
+        if (CurHealth <= 0)
+        {
+            animator.SetBool("die", true);
+        }
+
+    }
 }
