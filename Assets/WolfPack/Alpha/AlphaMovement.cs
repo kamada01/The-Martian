@@ -7,36 +7,32 @@ public class AlphaMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCD;
-    [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
-    [SerializeField] GameObject beta;
+    [SerializeField] public GameObject beta;
     [SerializeField] private float vision;
-    [SerializeField] private Astronaut player;
+    [SerializeField] private Transform player;
     GameObject memberA, memberB;
 
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private float HP = 8;
+    private int HP = 3;
+    private int damage = 2;
 
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
-
     private KillCount killcount;
-    private void Start()
-    {
-        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
-        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
-    }
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        //visionController = GetComponent<AlphaVisionController>();
-        //SummonPack();
-        StartCoroutine(SummonPack());
+        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
+        if (beta != null)
+        {
+            StartCoroutine(SummonPack());
+        }
 
     }
 
@@ -64,19 +60,15 @@ public class AlphaMovement : MonoBehaviour
     }
     private IEnumerator AttackPlayer()
     {
-        // Wait for 1 second 
-        yield return new WaitForSeconds(1f);
-        // only reduce player's HP if the player is still within the attacking range after 1 sec
-        /*
+        // Wait for 0.7 second 
+        yield return new WaitForSeconds(0.7f);
+        // only reduce player's HP if the player is still within the attacking range after 0.7 sec
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
-            //DamagePlayer(damage);
-            //debug message
+            DamagePlayer(damage);
             //Debug.Log("Attack causes damage");
         }
-        */
-        DamagePlayer(damage);
     }
 
     private bool PlayerWithinAttackRange()
@@ -107,41 +99,32 @@ public class AlphaMovement : MonoBehaviour
     }
 
     private void DamagePlayer(int damageCaused)
-    {
-        //To be implement after setting up the player's hp codes
-        player.TakingDamage(damageCaused);
-        player.damagePopup(damageCaused);
+    {//use the TakingDamage method in player
+        player.GetComponent<Astronaut>().TakingDamage(damageCaused);
     }
+    
 
-    // Taking damage
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TakingDamage(int damageTaken)
     {
-        Vector3 CurPos = gameObject.transform.position;
-        CurPos.y += 1;
-        if (collision.CompareTag("PistolBullet"))
-        {
-            HP -= pistal.damage;
-            DamagePopup.Create(CurPos, pistal.damage);
-        }
-        else if (collision.CompareTag("mbullet"))
-        {
-            HP -= shotGun.damage;
-            DamagePopup.Create(CurPos, shotGun.damage);
-        }
-        else if (collision.CompareTag("laser"))
-        {
-            HP -= laserGun.damage;
-            DamagePopup.Create(CurPos, laserGun.damage);
-        }
+        animator.SetTrigger("hurt");
+        HP = HP - damageTaken;
+        Debug.Log("Hurt by Player. Current HP: "+HP);
 
         if (HP <= 0)
-        {
+        {   //stopped all the movement
+            DirectionToPlayer = Vector2.zero;
+            rb.velocity = Vector2.zero;
+            animator.SetTrigger("death");
+            //Debug.Log("Death Triggered ");
             Destroy(memberA);
             Destroy(memberB);
-            Destroy(gameObject);
             killcount.AddKill();
-
         }
+    }
+
+    public void DestroyAfterAnimation()
+    {   //called by the last frame in the Death animation clip
+        Destroy(gameObject);
     }
 
     private void MovingTowardsPlayer()
@@ -177,7 +160,7 @@ public class AlphaMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
+        Vector2 enemyToPlayerVector = player.position - transform.position;
 
         if (enemyToPlayerVector.magnitude <= vision)
         {
@@ -193,8 +176,8 @@ public class AlphaMovement : MonoBehaviour
 
     private IEnumerator SummonPack()
     {
-        // Wait for 7 second 
-        yield return new WaitForSeconds(7f);
+        // Wait for 5 seconds 
+        yield return new WaitForSeconds(5f);
 
         Renderer rd = GetComponent<Renderer>();
         float s = rd.bounds.size.x / 2;
@@ -222,35 +205,17 @@ public class AlphaMovement : MonoBehaviour
         memberB.GetComponent<BetaMovement>().player = player;
     }
 
+    public void SetPlayer(Transform playerObject)
+    {//only used by the Spawn to pass its player object
+        player = playerObject;
 
-    /*void SummonPack()
-    {
-        Renderer rd = GetComponent<Renderer>();
-        float s = rd.bounds.size.x / 2;
+    }
+    public void SetBeta(GameObject enemyObject)
+    {//only used by the Spawn to pass its player object
+        beta = enemyObject;
+        
 
-        // Variables to store the X position of the spawn object
-        float x1 = transform.position.x - s;
-        float x2 = transform.position.x + s;
-
-        // Randomly pick a point within the spawn object 
-        Vector2 spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
-
-        // Create an enemy at the 'spawnPoint' position
-        memberA = Instantiate(beta, spawnPoint, Quaternion.identity);
-
-        // Assign the player variable of the new beta object to the player variable of this AlphaMovement script
-        memberA.GetComponent<BetaMovement>().player = player;
-
-        // Randomly pick a point within the spawn object 
-        spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
-
-        // Create an enemy at the 'spawnPoint' position
-        memberB = Instantiate(beta, spawnPoint, Quaternion.identity);
-
-        // Assign the player variable of the new beta object to the player variable of this AlphaMovement script
-        memberB.GetComponent<BetaMovement>().player = player;
-
-    }*/
+    }
 
     public void OnCollisionStay2D(Collision2D collision)
     {
@@ -268,4 +233,5 @@ public class AlphaMovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().drag = 0;
         }
     }
+
 }
