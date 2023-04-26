@@ -136,6 +136,7 @@ public class Astronaut : MonoBehaviour
         if (CurHealth <= 0)
         {
             animator.SetBool("die", true);
+            GlobalVariables.dead = 1;
         }
 
     }
