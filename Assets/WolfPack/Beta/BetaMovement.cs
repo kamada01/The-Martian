@@ -10,24 +10,17 @@ public class BetaMovement : MonoBehaviour
     [SerializeField] private float attackCD;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private float vision;
-    [SerializeField] public Astronaut player;
+    [SerializeField] public Transform player;
 
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private int HP = 4;
+    private int HP = 2;
     private int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
-
-    private KillCount killcount;
-    private void Start()
-    {
-        player = (Astronaut)FindObjectOfType(typeof(Astronaut));
-        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
-    }
 
     private void Awake()
     {
@@ -62,15 +55,12 @@ public class BetaMovement : MonoBehaviour
         // Wait for 0.3 second 
         yield return new WaitForSeconds(0.3f);
         // only reduce player's HP if the player is still within the attacking range
-        /*
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             //Reduce Player's HP in a sub
             DamagePlayer(damage);
             //Debug.Log("Attack causes damage");
         }
-        */
-        DamagePlayer(damage);
     }
 
 
@@ -103,37 +93,27 @@ public class BetaMovement : MonoBehaviour
 
     private void DamagePlayer(int damageCaused)
     {
-        player.TakingDamage(damageCaused);
-        player.damagePopup(damageCaused);
+        player.GetComponent<Astronaut>().TakingDamage(damageCaused);
     }
 
-    // Taking damage
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TakingDamage(int damageTaken)
     {
-        Vector3 CurPos = gameObject.transform.position;
-        CurPos.y += 1;
-        if (collision.CompareTag("PistolBullet"))
-        {
-            HP -= pistal.damage;
-            DamagePopup.Create(CurPos, pistal.damage);
-        }
-        else if (collision.CompareTag("mbullet"))
-        {
-            HP -= shotGun.damage;
-            DamagePopup.Create(CurPos, shotGun.damage);
-        }
-        else if (collision.CompareTag("laser"))
-        {
-            HP -= laserGun.damage;
-            DamagePopup.Create(CurPos, laserGun.damage);
-        }
+        animator.SetTrigger("hurt");
+        HP = HP - damageTaken;
+        //Debug.Log("Hurt by Player. Current HP: " + HP);
 
         if (HP <= 0)
-        {
-            Destroy(gameObject);
-            killcount.AddKill();
-
+        {   //stopped all the movement
+            DirectionToPlayer = Vector2.zero;
+            rb.velocity = Vector2.zero;
+            animator.SetTrigger("death");
+            //Debug.Log("Death Triggered ");
         }
+    }
+
+    public void DestroyAfterAnimation()
+    {   //called by the last frame in the Death animation clip
+        Destroy(gameObject);
     }
 
     private void MovingTowardsPlayer() {
@@ -166,7 +146,7 @@ public class BetaMovement : MonoBehaviour
 
     private bool AwareOfPlayer()
     {   //check if the player is within the "detection range"
-        Vector2 enemyToPlayerVector = player.transform.position - transform.position;
+        Vector2 enemyToPlayerVector = player.position - transform.position;
         if (enemyToPlayerVector.magnitude <= vision)
         {
             DirectionToPlayer = enemyToPlayerVector.normalized;
@@ -177,21 +157,10 @@ public class BetaMovement : MonoBehaviour
             return false;
         }
     }
-
-    public void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            gameObject.GetComponent<Rigidbody2D>().drag = 100;
-        }
+    public void SetPlayer(Transform playerObject)
+    {//only used by the Spawn to pass its player object
+        player = playerObject;
 
     }
 
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            gameObject.GetComponent<Rigidbody2D>().drag = 0;
-        }
-    }
 }
