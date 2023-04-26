@@ -7,6 +7,15 @@ improvments
 - 'Minotaur ' AnimationEvent has no function name specified! -> Need fix 
       -> Not sure what happens but the prefab should work, will investigate later (Ed 4/25 16:55)
 
+#Spawn Usage
+- spawnU for up, spawnD for down, SpawnR for R, SpawnL for L
+- Must attach Enemy and Player
+- Enemy_two is for the wolf pack only
+- recommend setting:
+- SpawnU: Enemy = Alpha; Enemy_two = Beta; Spawn Time = 5
+- SpawnD: Emeny = Minotaur; Spawn Time = 6
+- SpawnL and SpawnR: Enemy = BrainMole; Spawn Time = 2
+
 
 # Summery for monsters:
 1. Minotaur:
