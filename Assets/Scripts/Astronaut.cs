@@ -92,7 +92,7 @@ public class Astronaut : MonoBehaviour
         {
             movement.x = 0;
         }
-        if ( (transform.position.y >= topRightL.y && movement.y == 1))
+        if ((transform.position.y <= bottomLeftL.y && movement.y == -1) || (transform.position.y >= topRightL.y && movement.y == 1))
         {
             movement.y = 0;
         }

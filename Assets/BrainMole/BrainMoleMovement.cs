@@ -22,9 +22,12 @@ public class BrainMoleMovement : MonoBehaviour
     //private BrainMoleVisionController visionController;
     //private Vector2 targetDirection;
     private RaycastHit2D hit;
+
+    private KillCount killcount;
     private void Start()
     {
         player = (Astronaut)FindObjectOfType(typeof(Astronaut));
+        killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
     }
 
     private void Awake()
@@ -108,14 +111,34 @@ public class BrainMoleMovement : MonoBehaviour
         player.damagePopup(damageCaused);
     }
 
-    public void TakingDamage(float damageTaken)
+
+    // Taking damage
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //To be implement after settig up the player's weapons
-        HP = HP - damageTaken;
+        Debug.Log(collision.gameObject.tag);
+        Vector3 CurPos = gameObject.transform.position;
+        CurPos.y += 1;
+        if (collision.CompareTag("PistolBullet"))
+        {
+            HP -= pistal.damage;
+            DamagePopup.Create(CurPos, pistal.damage);
+        }
+        else if (collision.CompareTag("mbullet"))
+        {
+            HP -= shotGun.damage;
+            DamagePopup.Create(CurPos, shotGun.damage);
+        }
+        else if (collision.CompareTag("laser"))
+        {
+            HP -= laserGun.damage;
+            DamagePopup.Create(CurPos, laserGun.damage);
+        }
 
         if (HP <= 0)
         {
             Destroy(gameObject);
+            killcount.AddKill();
+
         }
     }
 
@@ -162,5 +185,20 @@ public class BrainMoleMovement : MonoBehaviour
         }
     }
 
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().drag = 100;
+        }
 
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().drag = 0;
+        }
+    }
 }

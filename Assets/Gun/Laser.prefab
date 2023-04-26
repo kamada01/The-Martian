@@ -28,6 +28,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 6081058878254511422, guid: 71c67f220ca8849bbb55515070a9dde7,
+        type: 3}
+      propertyPath: m_TagString
+      value: laser
+      objectReference: {fileID: 0}
     - target: {fileID: 7546001664382014320, guid: 71c67f220ca8849bbb55515070a9dde7,
         type: 3}
       propertyPath: speed

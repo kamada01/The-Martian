@@ -16,18 +16,22 @@ public class MinotaurMovement : MonoBehaviour
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private float HP = 10;
+    private float HP = 12;
 
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
 
     private pistal pistal;
+    private shotGun mbullet;
+    private laserGun laser;
     private KillCount killcountscript;
     private void Start()
     {
         player = (Astronaut)FindObjectOfType(typeof(Astronaut));
         pistal = (pistal)FindObjectOfType(typeof(pistal));
+        mbullet = (shotGun)FindObjectOfType(typeof(shotGun));
+        laser = (laserGun)FindObjectOfType(typeof(laserGun));
         killcountscript = GameObject.Find("KillCount").GetComponent<KillCount>();
     }
 
@@ -112,20 +116,28 @@ public class MinotaurMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.transform.tag);
+        Vector3 CurPos = gameObject.transform.position;
+        CurPos.y += 1;
         if (collision.CompareTag("PistolBullet"))
         {
             HP -= pistal.damage;
-            Vector3 CurPos = gameObject.transform.position;
-            CurPos.y += 1;
             DamagePopup.Create(CurPos, pistal.damage);
+        }
+        else if (collision.CompareTag("mbullet"))
+        {
+            HP -= shotGun.damage;
+            DamagePopup.Create(CurPos, shotGun.damage);
+        } else if (collision.CompareTag("laser"))
+        {
+            HP -= laserGun.damage;
+            DamagePopup.Create(CurPos, laserGun.damage);
+        }
 
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-                killcountscript.AddKill();
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+            killcountscript.AddKill();
 
-            }
         }
     }
     private void MovingTowardsPlayer() { 
@@ -173,4 +185,20 @@ public class MinotaurMovement : MonoBehaviour
 
     }
 
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().drag = 100;
+        }
+        
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().drag = 0;
+        }
+    }
 }

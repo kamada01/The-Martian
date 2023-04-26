@@ -11,7 +11,13 @@ public class pistal : MonoBehaviour
     public int bulletSpeed = 10;
     public AudioClip gunshotSound;
     private AudioSource audioSource;
-    public static int damage = 3;
+    public static int damage = 2;
+
+    public Sprite _Image = null;
+    public Sprite Image
+    {
+        get { return _Image; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -110,4 +116,5 @@ public class pistal : MonoBehaviour
         Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
         return worldPosition;
     }
+
 }
