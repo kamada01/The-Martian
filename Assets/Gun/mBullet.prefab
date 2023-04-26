@@ -28,6 +28,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 6081058878254511422, guid: 71c67f220ca8849bbb55515070a9dde7,
+        type: 3}
+      propertyPath: m_TagString
+      value: mbullet
+      objectReference: {fileID: 0}
     - target: {fileID: 7882395683114211713, guid: 71c67f220ca8849bbb55515070a9dde7,
         type: 3}
       propertyPath: m_RootOrder

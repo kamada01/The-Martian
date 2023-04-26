@@ -19,6 +19,8 @@ TagManager:
   - GunFlash
   - Minotaur
   - PistolBullet
+  - KillCount
+  - Brainmole
   layers:
   - Default
   - TransparentFX
