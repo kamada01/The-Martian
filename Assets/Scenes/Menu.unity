@@ -639,8 +639,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.87692, y: -120}
-  m_SizeDelta: {x: 677.6411, y: 208.7784}
+  m_AnchoredPosition: {x: -11.4259, y: -140.433}
+  m_SizeDelta: {x: 1050.5431, y: 249.6444}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307835249
 MonoBehaviour:
@@ -662,7 +662,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '## TODO ##'
+  m_text: 'You start with 100 Hp.
+
+
+    Defeat monsters, survive for 5 minutes and
+    you will back to EARTH safely!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -689,8 +693,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -701,7 +705,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 1.75
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1519,7 +1523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &732539424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2308,8 +2312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.87692, y: 277.68433}
-  m_SizeDelta: {x: 677.6411, y: 208.7784}
+  m_AnchoredPosition: {x: -118.69913, y: 282.7926}
+  m_SizeDelta: {x: 835.9966, y: 198.5618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079585103
 MonoBehaviour:
@@ -2334,11 +2338,11 @@ MonoBehaviour:
   m_text: 'MOVE : WASD or ARROW KEYS
 
 
-    SHOOT: LEFT MOUSE BUTTON
+    SHOOT: LEFT MOUSE BUTTON or SPACE BAR
 
 
     SELECT
-    INVENTORY: Number Keys [1] & [2]'
+    INVENTORY: Number Keys [1] [2] [3] [4]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4483,7 +4487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1928867971
 RectTransform:
   m_ObjectHideFlags: 0
