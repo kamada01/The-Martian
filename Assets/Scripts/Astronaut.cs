@@ -28,6 +28,8 @@ public class Astronaut : MonoBehaviour
     private Vector3 topRightL;
     private Vector3 bottomLeftL;
     // Start is called before the first frame update
+    public AudioClip gunshotSound;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -42,6 +44,8 @@ public class Astronaut : MonoBehaviour
 
         topRightL = topRight.transform.position;
         bottomLeftL = bottomLeft.transform.position;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Inventory_RemovedItem(object sender, InventoryEventArgs e)
@@ -137,6 +141,7 @@ public class Astronaut : MonoBehaviour
     public void TakingDamage(int damageTaken)
     {
         CurHealth = CurHealth - damageTaken;
+        audioSource.PlayOneShot(gunshotSound);
 
         if (CurHealth <= 0)
         {
