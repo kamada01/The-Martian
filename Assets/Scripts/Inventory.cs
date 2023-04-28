@@ -11,6 +11,11 @@ public class Inventory : MonoBehaviour
     public event EventHandler<InventoryEventArgs> RemovedItem;
     public event EventHandler<InventoryEventArgs> UsedItem;
 
+    public InventoryItem getItem(int i)
+    {
+        return InvItems[i];
+    }
+
     public List<InventoryItem> InvList
     {
         set { InvItems = value;  }

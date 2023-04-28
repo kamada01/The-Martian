@@ -23,6 +23,7 @@ TagManager:
   - Brainmole
   - laser
   - mbullet
+  - Hand
   layers:
   - Default
   - TransparentFX

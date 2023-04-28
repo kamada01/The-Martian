@@ -27,8 +27,8 @@ public class ItemBase : MonoBehaviour, InventoryItem
     // drop weapon from inventory
     public void OnDrop()
     {
-        gameObject.SetActive(true);
-        gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+        gameObject.SetActive(false);
+        // gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
     }
 
     // select weapon from inventory into hand
