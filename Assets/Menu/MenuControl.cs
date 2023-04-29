@@ -13,6 +13,13 @@ public class MenuControl : MonoBehaviour
 
     public void NewGameYes()
     {
+        SceneManager.LoadScene("SampleScene_1");
+        player = (Astronaut)FindAnyObjectByType(typeof(Astronaut));
+        Debug.Log(Astronaut.CurHealth);
+    }
+
+    public void LoadCutScene()
+    {
         /*SceneManager.LoadScene("SampleScene_1");
         player = (Astronaut)FindAnyObjectByType(typeof(Astronaut));
         Debug.Log(Astronaut.CurHealth);*/
