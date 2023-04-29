@@ -13,7 +13,7 @@ public class AlphaMovement : MonoBehaviour
     [SerializeField] private float vision;
     [SerializeField] private Transform player;
     GameObject memberA, memberB;
-    GameObject[] packMember;
+    //GameObject[] packMember;
     private int packSize;
 
     private Vector2 DirectionToPlayer;
@@ -43,9 +43,9 @@ public class AlphaMovement : MonoBehaviour
         killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
         if (beta != null)
         {
-            Debug.Log(packSize);
-            packSize = Random.Range(0, 7);
-            packMember = new GameObject[packSize];
+            //Debug.Log(packSize);
+            //packSize = Random.Range(0, 7);
+            //packMember = new GameObject[packSize];
             StartCoroutine(SummonPack());
         }
 
@@ -201,7 +201,7 @@ public class AlphaMovement : MonoBehaviour
     {
         // Wait for 5 seconds 
         yield return new WaitForSeconds(5f);
-
+        /*
         Renderer rd = GetComponent<Renderer>();
         float s = rd.bounds.size.x / 2;
 
@@ -220,10 +220,10 @@ public class AlphaMovement : MonoBehaviour
 
             // Assign the player variable of the new beta object to the player variable of this AlphaMovement script
             packMember[i].GetComponent<BetaMovement>().player = player;
-        }
+        }*/
 
 
-        /*enderer rd = GetComponent<Renderer>();
+        enderer rd = GetComponent<Renderer>();
         float s = rd.bounds.size.x / 2;
 
         // Variables to store the X position of the spawn object
@@ -246,7 +246,7 @@ public class AlphaMovement : MonoBehaviour
         memberB = Instantiate(beta, spawnPoint, Quaternion.identity);
 
         // Assign the player variable of the new beta object to the player variable of this AlphaMovement script
-        memberB.GetComponent<BetaMovement>().player = player;*/
+        memberB.GetComponent<BetaMovement>().player = player;
     }
 
     public void SetPlayer(Transform playerObject)
