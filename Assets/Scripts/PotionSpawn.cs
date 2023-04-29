@@ -34,7 +34,7 @@ public class PotionSpawn : MonoBehaviour
             float spawnX = Random.Range
                 (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
 
-            Vector2 pos = new Vector2(spawnX, spawnY);
+            Vector3 pos = new Vector3(spawnX, spawnY, 0);
             Instantiate(potiontoSpawn, pos, Quaternion.identity);
         }
     }
