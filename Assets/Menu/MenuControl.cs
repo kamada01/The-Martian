@@ -13,9 +13,10 @@ public class MenuControl : MonoBehaviour
 
     public void NewGameYes()
     {
-        SceneManager.LoadScene("SampleScene_1");
+        /*SceneManager.LoadScene("SampleScene_1");
         player = (Astronaut)FindAnyObjectByType(typeof(Astronaut));
-        Debug.Log(Astronaut.CurHealth);
+        Debug.Log(Astronaut.CurHealth);*/
+        SceneManager.LoadScene("OpeningScene");
     }
 
     public void LoadGameYes()
