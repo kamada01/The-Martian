@@ -16,7 +16,7 @@ public class BetaMovement : MonoBehaviour
 
     private float cdTimer = Mathf.Infinity;
     private int HP = 2;
-    private int damage = 1;
+    public int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;

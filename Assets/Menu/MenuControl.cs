@@ -15,7 +15,7 @@ public class MenuControl : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene_1");
         player = (Astronaut)FindAnyObjectByType(typeof(Astronaut));
-        Debug.Log(Astronaut.CurHealth);
+        Debug.Log(player.CurHealth);
     }
 
     public void LoadGameYes()

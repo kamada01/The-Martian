@@ -17,7 +17,7 @@ public class AlphaMovement : MonoBehaviour
 
     private float cdTimer = Mathf.Infinity;
     private int HP = 3;
-    private int damage = 2;
+    public int damage = 2;
 
     Animator animator;
     private Rigidbody2D rb;

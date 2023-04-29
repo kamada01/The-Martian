@@ -15,7 +15,7 @@ public class BrainMoleMovement : MonoBehaviour
 
     private float cdTimer = Mathf.Infinity;
     private int HP = 1;
-    private int damage = 1;
+    public int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;

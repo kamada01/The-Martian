@@ -43,7 +43,7 @@ public class EndGame : MonoBehaviour
                 UpdateCountdownText(); // Update the countdown text each frame
                 if (GlobalVariables.dead == 1){
                     Debug.Log("Player die");
-                    Astronaut.CurHealth = 100;
+                    player.CurHealth = 100;
                     GlobalVariables.dead = 0;
                     SceneManager.LoadScene("GameLost");
                 }

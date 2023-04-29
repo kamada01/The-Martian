@@ -17,7 +17,7 @@ public class Astronaut : MonoBehaviour
     public GameObject Hand;
 
     public int MaxHealth = 100;
-    public static int CurHealth = 100;
+    public int CurHealth = 100;
     public HealthBar healthBar;
 
     public Animator animator;

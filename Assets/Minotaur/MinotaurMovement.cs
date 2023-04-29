@@ -15,7 +15,7 @@ public class MinotaurMovement : MonoBehaviour
 
     private float cdTimer = Mathf.Infinity;
     private int HP = 10;
-    private int damage = 5;
+    public int damage = 5;
 
 
     Animator animator;
