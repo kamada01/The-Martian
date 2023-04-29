@@ -13,6 +13,11 @@ public class MachineGun : MonoBehaviour
     public AudioClip gunshotSound;
     private AudioSource audioSource;
 
+    public AmmCount ammo;
+    public int maxammo;
+    public int curammo;
+    public float cooldown = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +25,11 @@ public class MachineGun : MonoBehaviour
         if (audioSource == null) {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
-  
+
+        maxammo = 50;
+        curammo = maxammo;
+        ammo = (AmmCount)FindAnyObjectByType(typeof(AmmCount));
+
     }
 
     // Update is called once per frame
@@ -31,12 +40,34 @@ public class MachineGun : MonoBehaviour
         {
             HandleShooting();            
         };
-        
+
+        if (curammo <= 0)
+        {
+            ammo.colorRed();
+        }
+        else
+        {
+            ammo.colorBlack();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ammo.colorBlack();
+            StartCoroutine(reload());
+        }
+
+        ammo.updateCount(curammo, maxammo);
     }
 
+    IEnumerator reload()
+    {
+        yield return new WaitForSeconds(cooldown);
+        curammo = maxammo;
+    }
 
     private void HandleShooting(){
-        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) {
+        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && curammo > 0) {
             Vector3 mousePosition = GetMouseWorldPosition();
             aimAnimator.SetBool("shooting", true);  
             Fire();
@@ -53,7 +84,7 @@ public class MachineGun : MonoBehaviour
         //GameController.Instance.GetComponent<AudioManager>().PlaySound("GunShot");
         SpawnBullet();
         PlayGunshotSound();
-
+        curammo--;
     }
 
 

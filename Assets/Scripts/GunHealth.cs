@@ -20,7 +20,7 @@ public class GunHealth : MonoBehaviour
     public void SetMaxGun(int health)
     {
         slider.maxValue = health;
-        slider.value = health;
-        fill.color = gradient.Evaluate(1f);
+        // slider.value = health;
+        // fill.color = gradient.Evaluate(1f);
     }
 }

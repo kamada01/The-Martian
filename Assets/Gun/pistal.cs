@@ -16,15 +16,8 @@ public class pistal : MonoBehaviour
 
     public AmmCount ammo;
     public int maxammo;
-    public int curammo;
+    public static int curammo;
     public float cooldown = 3f;
-
-    public GunHealth gh;
-    public int maxHealth;
-    public int curHealth;
-
-    private float nextAction = 0.0f;
-    private float period = 1.0f;
 
     private Inventory inv;
 
@@ -44,13 +37,8 @@ public class pistal : MonoBehaviour
 
         maxammo = 30;
         curammo = maxammo;
+        Debug.Log(maxammo);
         ammo = (AmmCount)FindAnyObjectByType(typeof(AmmCount));
-
-        maxHealth = 25;
-        curHealth = maxHealth;
-        gh = (GunHealth)FindAnyObjectByType(typeof(GunHealth));
-
-        inv = (Inventory)FindAnyObjectByType(typeof(Inventory));
     }
 
     // Update is called once per frame
@@ -65,37 +53,20 @@ public class pistal : MonoBehaviour
         if (curammo <= 0)
         {
             ammo.colorRed();
+        } else
+        {
+            ammo.colorBlack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(reload());
         }
 
         ammo.updateCount(curammo, maxammo);
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ammo.colorBlack();
-            StartCoroutine(reload());
-        }
-
-
-        if (gameObject.transform.parent.CompareTag("Hand") && Time.time > nextAction)
-        {
-            nextAction += period;
-            reduceHealth();
-        }
-
-        if (curHealth < 0)
-        { 
-            InventoryItem i = gameObject.GetComponent<ItemBase>();
-            inv.RemoveItem(i);
-            Destroy(gameObject);
-        }
     }
 
-
-    void reduceHealth()
-    {
-        curHealth--;
-        gh.SetGun(curHealth);
-    }
 
     IEnumerator reload()
     {
@@ -104,7 +75,7 @@ public class pistal : MonoBehaviour
     }
 
     private void HandleShooting(){
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && curammo > 0 && gameObject.transform.parent.CompareTag("Hand"))
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && curammo > 0)
         {
             Vector3 mousePosition = GetMouseWorldPosition();
             aimAnimator.SetBool("Shoot", true);
@@ -123,18 +94,17 @@ public class pistal : MonoBehaviour
     }
 
    void Fire() {
-
         //GameController.Instance.GetComponent<AudioManager>().PlaySound("GunShot");
         SpawnBullet();
         PlayGunshotSound();
-        curammo--;
+        curammo-= 1;
     }
 
 
     void PlayGunshotSound() {
-    if (gunshotSound != null && audioSource != null) {
-        audioSource.PlayOneShot(gunshotSound);
-    }
+        if (gunshotSound != null && audioSource != null) {
+            audioSource.PlayOneShot(gunshotSound);
+        }
     }
 
 

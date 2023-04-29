@@ -6,7 +6,6 @@ public class shotGun : MonoBehaviour
 {
     public Animator aimAnimator;
     public Transform muzzle;
-
     [SerializeField] private Transform bullet;
     private AnimatorStateInfo stateInfo;
     public int bulletSpeed = 10;
@@ -15,6 +14,12 @@ public class shotGun : MonoBehaviour
     private AudioSource audioSource;
 
     public static int damage = 3;
+
+    public AmmCount ammo;
+    public int maxammo;
+    public int curammo;
+    public float cooldown = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,23 +27,48 @@ public class shotGun : MonoBehaviour
         if (audioSource == null) {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
-  
+
+        maxammo = 8;
+        curammo = maxammo;
+        ammo = (AmmCount)FindAnyObjectByType(typeof(AmmCount));
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         //HandleGunEnable();
-        if  (GlobalVariables.gunEnabled == 4)
+        if (GlobalVariables.gunEnabled == 4)
         {
-            HandleShooting();            
+            HandleShooting();
         };
-        
+
+        if (curammo <= 0)
+        {
+            ammo.colorRed();
+        } else
+        {
+            ammo.colorBlack();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ammo.colorBlack();
+            StartCoroutine(reload());
+        }
+
+        ammo.updateCount(curammo, maxammo);
+
     }
 
+    IEnumerator reload()
+    {
+        yield return new WaitForSeconds(cooldown);
+        curammo = maxammo;
+    }
 
     private void HandleShooting(){
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && curammo > 0) {
             Vector3 mousePosition = GetMouseWorldPosition();
             aimAnimator.SetBool("shooting", true);  
             Fire();
@@ -59,14 +89,14 @@ public class shotGun : MonoBehaviour
         //GameController.Instance.GetComponent<AudioManager>().PlaySound("GunShot");
         SpawnBullet();
         PlayGunshotSound();
-
+        curammo--;
     }
 
 
     void PlayGunshotSound() {
-    if (gunshotSound != null && audioSource != null) {
-        audioSource.PlayOneShot(gunshotSound);
-    }
+        if (gunshotSound != null && audioSource != null) {
+            audioSource.PlayOneShot(gunshotSound);
+        }
     }
 
 
