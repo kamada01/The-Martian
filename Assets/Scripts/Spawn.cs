@@ -19,6 +19,10 @@ public class Spawn : MonoBehaviour
     // Variable to know how fast we should create new enemies
     public float spawnTime;
 
+    public float xAdj = 0;
+    public float yAdj = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,24 +33,30 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // New function to spawn an enemy
     void AddEnemy()
     {
         Renderer rd = GetComponent<Renderer>();
-        float s = rd.bounds.size.x / 2;
+        float xLen = rd.bounds.size.x / 2;
+        float yLen = rd.bounds.size.y / 2;
+
 
         // Variables to store the X position of the spawn object
-        float x1 = transform.position.x - s;
-        float x2 = transform.position.x + s;
+        float x1 = transform.position.x - xLen + xAdj;
+        float x2 = transform.position.x + xLen + xAdj;
+
+        // Variables to store the Y position of the spawn object
+        float y1 = transform.position.y - yLen + yAdj;
+        float y2 = transform.position.y + yLen + yAdj;
 
         // Randomly pick a point within the spawn object 
-        Vector2 spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
+        Vector2 spawnPoint = new Vector2(Random.Range(x1, x2), Random.Range(y1, y2));
 
         // Create an enemy at the 'spawnPoint' position
-        GameObject temp = Instantiate(enemy, spawnPoint, Quaternion.identity);
+        GameObject temp = Instantiate(enemy, spawnPoint, Quaternion.identity);
 
         string enemyName = enemy.gameObject.name;
         //process the name so that it matches the name of the script

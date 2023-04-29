@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using UnityEngine;
 
 public class AlphaMovement : MonoBehaviour
@@ -12,30 +13,39 @@ public class AlphaMovement : MonoBehaviour
     [SerializeField] private float vision;
     [SerializeField] private Transform player;
     GameObject memberA, memberB;
+    GameObject[] packMember;
+    private int packSize;
 
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private int HP = 3;
-    public int damage = 2;
+    public int HP = 3;
+    private int damage = 2;
 
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
     private KillCount killcount;
 
-    private void Start()
+    public AudioClip breathingSound;
+    //private AudioSource audioSource;
+
+   /* private void Start()
     {
         killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
-    }
+    }*/
 
     private void Awake()
     {
+        //audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
         if (beta != null)
         {
+            Debug.Log(packSize);
+            packSize = Random.Range(0, 7);
+            packMember = new GameObject[packSize];
             StartCoroutine(SummonPack());
         }
 
@@ -113,7 +123,7 @@ public class AlphaMovement : MonoBehaviour
     {
         animator.SetTrigger("hurt");
         HP = HP - damageTaken;
-        Debug.Log("Hurt by Player. Current HP: "+HP);
+        //Debug.Log("Hurt by Player. Current HP: "+HP);
 
         if (HP <= 0)
         {   //stopped all the movement
@@ -121,8 +131,12 @@ public class AlphaMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.SetTrigger("death");
             //Debug.Log("Death Triggered ");
-            Destroy(memberA);
-            Destroy(memberB);
+            /*Destroy(memberA);
+            Destroy(memberB);*/
+            for (int i = 0; i < packSize; i++)
+            {
+                Destroy(packMember[i]);
+            }
             killcount.AddKill();
         }
     }
@@ -139,6 +153,10 @@ public class AlphaMovement : MonoBehaviour
             //targetDirection = visionController.DirectionToPlayer;
             animator.SetTrigger("move");
             //Debug.Log("Player detected. Moving towards the player");
+
+            //audioSource.PlayOneShot(breathingSound);
+            SoundManager.Instance.AlphaPlay(breathingSound);
+
 
             //Flip the spirte if necessary
             if (DirectionToPlayer.x > 0)
@@ -190,6 +208,27 @@ public class AlphaMovement : MonoBehaviour
         // Variables to store the X position of the spawn object
         float x1 = transform.position.x - s;
         float x2 = transform.position.x + s;
+        //Debug.Log(packSize);
+        for (int i = 0; i < packSize; i++)
+        {
+
+            // Randomly pick a point within the spawn object 
+            Vector2 spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
+
+            // Create an enemy at the 'spawnPoint' position
+            packMember[i] = Instantiate(beta, spawnPoint, Quaternion.identity);
+
+            // Assign the player variable of the new beta object to the player variable of this AlphaMovement script
+            packMember[i].GetComponent<BetaMovement>().player = player;
+        }
+
+
+        /*enderer rd = GetComponent<Renderer>();
+        float s = rd.bounds.size.x / 2;
+
+        // Variables to store the X position of the spawn object
+        float x1 = transform.position.x - s;
+        float x2 = transform.position.x + s;
 
         // Randomly pick a point within the spawn object 
         Vector2 spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
@@ -207,7 +246,7 @@ public class AlphaMovement : MonoBehaviour
         memberB = Instantiate(beta, spawnPoint, Quaternion.identity);
 
         // Assign the player variable of the new beta object to the player variable of this AlphaMovement script
-        memberB.GetComponent<BetaMovement>().player = player;
+        memberB.GetComponent<BetaMovement>().player = player;*/
     }
 
     public void SetPlayer(Transform playerObject)
@@ -221,7 +260,7 @@ public class AlphaMovement : MonoBehaviour
         
 
     }
-
+    /*
     public void OnCollisionEnter2D(Collision2D collision)
     {
         gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
@@ -241,6 +280,6 @@ public class AlphaMovement : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().drag = 0;
         }
-    }
+    }*/
 
 }

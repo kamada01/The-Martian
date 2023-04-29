@@ -21,6 +21,8 @@ public class ItemBase : MonoBehaviour, InventoryItem
     // pick up item from floor into inventory
     public void OnPickup()
     {
+        Hand = GameObject.FindWithTag("Hand");
+        Astronaut = GameObject.FindWithTag("Player");
         gameObject.SetActive(false);
     }
 

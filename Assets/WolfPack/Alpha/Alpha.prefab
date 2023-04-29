@@ -55,6 +55,7 @@ MonoBehaviour:
   beta: {fileID: 0}
   vision: 10
   player: {fileID: 0}
+  breathingSound: {fileID: 8300000, guid: 5627a63fac5e02646ab6dcc12855adf5, type: 3}
 --- !u!95 &6434594342144320726
 Animator:
   serializedVersion: 5

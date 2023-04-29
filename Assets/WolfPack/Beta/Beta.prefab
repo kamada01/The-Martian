@@ -127,6 +127,8 @@ MonoBehaviour:
   capsuleCollider: {fileID: 957849159881985761}
   vision: 10
   player: {fileID: 0}
+  HP: 2
+  bitingSound: {fileID: 8300000, guid: 04ff71b2bbce785489a46300157bc1c0, type: 3}
 --- !u!50 &957849159881985766
 Rigidbody2D:
   serializedVersion: 4
@@ -158,7 +160,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

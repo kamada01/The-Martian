@@ -25,6 +25,9 @@ public class MinotaurMovement : MonoBehaviour
 
     private KillCount killcountscript;
 
+    public AudioClip walkingSound;
+
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -82,7 +85,7 @@ public class MinotaurMovement : MonoBehaviour
         else
         {
             return false;
-        }     
+        }
     }
 
     private void OnDrawGizmos()
@@ -123,12 +126,15 @@ public class MinotaurMovement : MonoBehaviour
     }
 
 
-    private void MovingTowardsPlayer() { 
+    private void MovingTowardsPlayer()
+    {
         if (AwareOfPlayer())
         {
             //targetDirection = visionController.DirectionToPlayer;
             animator.SetTrigger("move");
             //Debug.Log("Player detected. Moving towards the player");
+            SoundManager.Instance.MinotaurPlay(walkingSound);
+
 
             //Flip the spirte if necessary
             if (DirectionToPlayer.x > 0)
