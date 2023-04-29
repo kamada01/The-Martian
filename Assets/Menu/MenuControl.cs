@@ -18,6 +18,14 @@ public class MenuControl : MonoBehaviour
         Debug.Log(player.CurHealth);
     }
 
+    public void LoadCutScene()
+    {
+        /*SceneManager.LoadScene("SampleScene_1");
+        player = (Astronaut)FindAnyObjectByType(typeof(Astronaut));
+        Debug.Log(Astronaut.CurHealth);*/
+        SceneManager.LoadScene("OpeningScene");
+    }
+
     public void LoadGameYes()
     {
         if (PlayerPrefs.HasKey("SavedGame"))
