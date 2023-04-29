@@ -23,5 +23,13 @@ public class StartGame : MonoBehaviour
             // Load the next scene after the timeline finishes
             SceneManager.LoadScene("SampleScene_1");
         }
+
+        // Check if the player has pressed the spacebar
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Load the next scene if the spacebar is pressed
+            SceneManager.LoadScene("SampleScene_1");
+        }
+
     }
 }
