@@ -131,12 +131,12 @@ public class AlphaMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.SetTrigger("death");
             //Debug.Log("Death Triggered ");
-            /*Destroy(memberA);
-            Destroy(memberB);*/
-            for (int i = 0; i < packSize; i++)
+            Destroy(memberA);
+            Destroy(memberB);
+            /*for (int i = 0; i < packSize; i++)
             {
                 Destroy(packMember[i]);
-            }
+            }*/
             killcount.AddKill();
         }
     }
@@ -223,7 +223,7 @@ public class AlphaMovement : MonoBehaviour
         }*/
 
 
-        enderer rd = GetComponent<Renderer>();
+        Renderer rd = GetComponent<Renderer>();
         float s = rd.bounds.size.x / 2;
 
         // Variables to store the X position of the spawn object
