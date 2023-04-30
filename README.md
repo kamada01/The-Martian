@@ -1,49 +1,27 @@
-# The-Martian
+Summary 
+The Martian is a 2D top down shooter, single player game. The player interacts with different weapons, enemies and random items. The project is made with Unity 2D for COMP 3329 2022 Section 2A. 
 
-improvments
-- Inventory slots border + color
-- HUD child componenets script linkages
-- Health bar size? Font? Style
-- 'Minotaur ' AnimationEvent has no function name specified! -> Need fix 
-      -> Not sure what happens but the prefab should work, will investigate later (Ed 4/25 16:55)
-
-#Spawn Usage
-- spawnU for up, spawnD for down, SpawnR for R, SpawnL for L
-- Must attach Enemy and Player
-- Enemy_two is for the wolf pack only
-- recommend setting:
-- SpawnU: Enemy = Alpha; Enemy_two = Beta; Spawn Time = 5
-- SpawnD: Emeny = Minotaur; Spawn Time = 6
-- SpawnL and SpawnR: Enemy = BrainMole; Spawn Time = 2
+In the year 2032, SpaceX, in collaboration with international space organizations, initiates the "Space Immigration Plan" (SIP) to transfer human civilization to Mars. The mission's first stage involves sending an astronaut to explore and prepare the planet for humanity's arrival. However, upon landing, the astronaut discovers that he/she is not alone on Mars, and the fate of the entire mission rests on the player’s shoulders.
 
 
-# Summery for monsters:
-1. Minotaur:
-- Low speed
-- High attack
-- High HP
-- Poor vision
-- Mid attack range
+Installing Instructions
+Run the complete output folder from https://drive.google.com/drive/folders/1NmVA048uSlKyBxxnQEAaO1CyWpMO9aum?usp=sharing
 
-2. Brainmole:
-- High speed
-- Low attack
-- Low HP
-- Strong vision
-- Low attack range
+Run “My project.exe”
 
-3. Alpha(werewolf):
-- average speed
-- low attack
-- mid HP
-- Poor Vision
-- Low Attack range
-- can summon its pack (Beta)
+Or 
 
-4. Beta:
-- average speed
-- low attack
-- Low HP
-- Poor Vision
-- Low Attack range
+Download the GitHub zip file or clone the repository from 
+‘https://github.com/kamada01/The-Martian/pulse’ or https://drive.google.com/drive/folders/1tS_2JGl4LN0ZnLb_BNYPD0oGROmzx695?usp=share_link
 
+Open the project from Unity Hub.
+
+Turn on audio for a better gameplay experience! Recommended screen resolution 1980 x 1080.
+
+How to play the game
+Survive for 5 minutes by running around the map to dodge enemy attacks. Pick up weapons on the ground to fire at enemies and potions for extra mysterious abilities. Enemies and items are spawn at random locations. Use arrow keys or WASD to move around, Mouse to aim, Spacebar or Left Mouse Button to shoot, Numeric Keys to switch weapons and ‘R’ to reload weapons.
+
+Authors
+Kam Ada Yi Man 3035662493
+Lee Hong Yuen 3035492317
+Shiu Kwok Ling, Kelvin 3035667663
