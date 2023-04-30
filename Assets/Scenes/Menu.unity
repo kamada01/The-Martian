@@ -639,7 +639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.4259, y: -124.82}
+  m_AnchoredPosition: {x: -11.4259, y: -140.433}
   m_SizeDelta: {x: 1050.5431, y: 249.6444}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307835249
@@ -664,16 +664,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You start with 100 Hp.
 
-    Pick up weapons and mysterious potions on
-    the ground. Some will help you, some will harm you.
 
-    Run away and fire at
-    monsters to survive.
-
-    When the timer reaches 0:00 (countdown from 5:00) ...
-
-    You
-    win the game!'
+    Defeat monsters, survive for 5 minutes and
+    you will back to EARTH safely!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -736,7 +729,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -128.4317}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1901,7 +1894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.25, y: 67.896}
+  m_AnchoredPosition: {x: -204.25119, y: 39}
   m_SizeDelta: {x: 664.8925, y: 48.147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941036248
@@ -2484,10 +2477,7 @@ MonoBehaviour:
 
 
     SELECT
-    INVENTORY: Number Keys [1] [2] [3] [4]
-
-
-    RELOAD: R'
+    INVENTORY: Number Keys [1] [2] [3] [4]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2599,8 +2589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.88, y: 159.6771}
-  m_SizeDelta: {x: 677.64, y: 36.1325}
+  m_AnchoredPosition: {x: -197.87692, y: 246}
+  m_SizeDelta: {x: 677.6411, y: 208.7784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091403065
 MonoBehaviour:
@@ -2699,7 +2689,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -320.02658}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2955,7 +2945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.25, y: 243}
+  m_AnchoredPosition: {x: -204.25119, y: 426.56583}
   m_SizeDelta: {x: 664.8925, y: 48.147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285980677
@@ -4122,8 +4112,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 37}
-  m_SizeDelta: {x: 1160.6229, y: 609.3107}
+  m_AnchoredPosition: {x: 26.5262, y: 19.1228}
+  m_SizeDelta: {x: 1150.0958, y: 977.7623}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1899576382
 GameObject:

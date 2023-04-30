@@ -8,10 +8,10 @@ public class laserGunEnable : ItemBase
     {
         get
         {
-            
-            return "laserGun";
-            
-            
+
+            return gameObject.name;
+
+
         }
     }
 

@@ -15,14 +15,17 @@ public class BetaMovement : MonoBehaviour
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private int HP = 2;
-    public int damage = 1;
+    public int HP = 2;
+    private int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
 
     private KillCount killcount;
+
+    public AudioClip bitingSound;
+
 
     private void Start()
     {
@@ -58,6 +61,7 @@ public class BetaMovement : MonoBehaviour
 
     private IEnumerator AttackPlayer()
     {
+        SoundManager.Instance.BetaPlay(bitingSound);
         // Wait for 0.3 second 
         yield return new WaitForSeconds(0.3f);
         // only reduce player's HP if the player is still within the attacking range
@@ -85,7 +89,7 @@ public class BetaMovement : MonoBehaviour
         else
         {
             return false;
-        }     
+        }
     }
 
     private void OnDrawGizmos()
@@ -94,7 +98,7 @@ public class BetaMovement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(capsuleCollider.bounds.center +
             transform.right * attackRange * transform.localScale.x,
-            capsuleCollider.bounds.size* 0.7f);
+            capsuleCollider.bounds.size * 0.7f);
     }
 
     private void DamagePlayer(int damageCaused)
@@ -123,7 +127,8 @@ public class BetaMovement : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void MovingTowardsPlayer() {
+    private void MovingTowardsPlayer()
+    {
         if (AwareOfPlayer())
         {
             animator.SetTrigger("move");

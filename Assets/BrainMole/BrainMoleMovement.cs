@@ -14,16 +14,20 @@ public class BrainMoleMovement : MonoBehaviour
     private Vector2 DirectionToPlayer;
 
     private float cdTimer = Mathf.Infinity;
-    private int HP = 1;
-    public int damage = 1;
+    public int HP = 1;
+    private int damage = 1;
 
     Animator animator;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
     private KillCount killcount;
 
+    public AudioClip bitingSound;
+    //private AudioSource audioSource;
+
     private void Awake()
     {
+        //audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         killcount = GameObject.Find("KillCount").GetComponent<KillCount>();
@@ -52,6 +56,7 @@ public class BrainMoleMovement : MonoBehaviour
 
     private IEnumerator AttackPlayer()
     {
+        SoundManager.Instance.BrainMolePlay(bitingSound);
         // Wait for 0.2 second 
         yield return new WaitForSeconds(0.2f);
         // only reduce player's HP if the player is still within the attacking range after 0.2 sec
@@ -166,7 +171,7 @@ public class BrainMoleMovement : MonoBehaviour
         player = playerObject;
 
     }
-
+    /*
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -182,5 +187,5 @@ public class BrainMoleMovement : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().drag = 0;
         }
-    }
+    }*/
 }

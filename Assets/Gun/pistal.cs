@@ -37,7 +37,7 @@ public class pistal : MonoBehaviour
 
         maxammo = 30;
         curammo = maxammo;
-        Debug.Log(maxammo);
+        //Debug.Log(maxammo);
         ammo = (AmmCount)FindAnyObjectByType(typeof(AmmCount));
     }
 
